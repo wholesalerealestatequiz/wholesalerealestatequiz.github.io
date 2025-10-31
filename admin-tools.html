@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Tools - Generate Study Plans</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+        }
+        
+        h1 {
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #6b7280;
+            margin-bottom: 30px;
+        }
+        
+        .form-section {
+            margin-bottom: 30px;
+        }
+        
+        .form-section h2 {
+            font-size: 1.2rem;
+            color: #374151;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+        
+        label {
+            display: block;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 8px;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        .category-inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .category-input {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .category-input label {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .category-input input {
+            width: 100%;
+        }
+        
+        .btn {
+            padding: 14px 28px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-secondary {
+            background: #e5e7eb;
+            color: #374151;
+            margin-left: 10px;
+        }
+        
+        .btn-secondary:hover {
+            background: #d1d5db;
+        }
+        
+        .output-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9fafb;
+            border-radius: 8px;
+            display: none;
+        }
+        
+        .output-section.active {
+            display: block;
+        }
+        
+        .success-message {
+            padding: 15px;
+            background: #d1fae5;
+            border-left: 4px solid #10b981;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            color: #065f46;
+        }
+        
+        .help-text {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        
+        .quick-fill {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .quick-fill button {
+            padding: 8px 16px;
+            background: #f3f4f6;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .quick-fill button:hover {
+            background: #e5e7eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Admin Tools - Study Plan Generator</h1>
+        <p class="subtitle">Generate personalized study plans for customers manually</p>
+        
+        <div class="form-section">
+            <h2>Customer Information</h2>
+            <div class="input-group">
+                <label for="customerName">Customer Name</label>
+                <input type="text" id="customerName" placeholder="John Doe">
+            </div>
+            <div class="input-group">
+                <label for="customerEmail">Customer Email</label>
+                <input type="email" id="customerEmail" placeholder="john@example.com">
+            </div>
+        </div>
+        
+        <div class="form-section">
+            <h2>Quiz Results</h2>
+            <div class="quick-fill">
+                <button onclick="fillSample('beginner')">Fill Sample: Beginner (45%)</button>
+                <button onclick="fillSample('intermediate')">Fill Sample: Intermediate (68%)</button>
+                <button onclick="fillSample('advanced')">Fill Sample: Advanced (85%)</button>
+            </div>
+            <div class="input-group">
+                <label for="overallScore">Overall Score (%)</label>
+                <input type="number" id="overallScore" min="0" max="100" placeholder="75">
+                <p class="help-text">Enter their overall quiz percentage (0-100)</p>
+            </div>
+            <div class="input-group">
+                <label for="difficulty">Quiz Difficulty Level</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="form-section">
+            <h2>Category Performance</h2>
+            <p class="help-text" style="margin-bottom: 15px;">Enter the percentage they scored in each category. Leave blank if not tested.</p>
+            
+            <div class="category-inputs">
+                <div class="category-input">
+                    <label>Market Analysis</label>
+                    <input type="number" id="cat_market" min="0" max="100" placeholder="%">
+                </div>
+                <div class="category-input">
+                    <label>Realtor Relationships</label>
+                    <input type="number" id="cat_realtor" min="0" max="100" placeholder="%">
+                </div>
+                <div class="category-input">
+                    <label>Contractor Partnerships</label>
+                    <input type="number" id="cat_contractor" min="0" max="100" placeholder="%">
+                </div>
+                <div class="category-input">
+                    <label>Seller Lead Generation</label>
+                    <input type="number" id="cat_seller" min="0" max="100" placeholder="%">
+                </div>
+                <div class="category-input">
+                    <label>Buyer Marketing</label>
+                    <input type="number" id="cat_buyer" min="0" max="100" placeholder="%">
+                </div>
+                <div class="category-input">
+                    <label>Lead Management</label>
+                    <input type="number" id="cat_lead" min="0" max="100" placeholder="%">
+                </div>
+                <div class="category-input">
+                    <label>Networking</label>
+                    <input type="number" id="cat_network" min="0" max="100" placeholder="%">
+                </div>
+                <div class="category-input">
+                    <label>Making Offers</label>
+                    <input type="number" id="cat_offers" min="0" max="100" placeholder="%">
+                </div>
+                <div class="category-input">
+                    <label>Property Marketing</label>
+                    <input type="number" id="cat_property" min="0" max="100" placeholder="%">
+                </div>
+                <div class="category-input">
+                    <label>Closing</label>
+                    <input type="number" id="cat_closing" min="0" max="100" placeholder="%">
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px;">
+            <button class="btn btn-primary" onclick="generateStudyPlan()">
+                📄 Generate Study Plan
+            </button>
+            <button class="btn btn-secondary" onclick="resetForm()">
+                🔄 Reset Form
+            </button>
+        </div>
+        
+        <div id="outputSection" class="output-section">
+            <div class="success-message">
+                ✅ Study plan generated successfully!
+            </div>
+            <p><strong>File saved as:</strong> <span id="fileName"></span></p>
+            <p style="margin-top: 15px;"><strong>Next steps:</strong></p>
+            <ol style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                <li>Check your Downloads folder</li>
+                <li>Open the HTML file in browser</li>
+                <li>Review the personalized content</li>
+                <li>Email it to: <strong id="emailCustomer"></strong></li>
+            </ol>
+        </div>
+    </div>
+    
+    <script src="questions.js"></script>
+    <script src="premium-study-plan.js"></script>
+    <script>
+        function fillSample(level) {
+            if (level === 'beginner') {
+                document.getElementById('overallScore').value = 45;
+                document.getElementById('difficulty').value = 'easy';
+                document.getElementById('cat_market').value = 33;
+                document.getElementById('cat_realtor').value = 40;
+                document.getElementById('cat_contractor').value = 50;
+                document.getElementById('cat_seller').value = 25;
+                document.getElementById('cat_buyer').value = 60;
+                document.getElementById('cat_lead').value = 30;
+                document.getElementById('cat_network').value = 55;
+                document.getElementById('cat_offers').value = 20;
+                document.getElementById('cat_property').value = 45;
+                document.getElementById('cat_closing').value = 35;
+            } else if (level === 'intermediate') {
+                document.getElementById('overallScore').value = 68;
+                document.getElementById('difficulty').value = 'medium';
+                document.getElementById('cat_market').value = 70;
+                document.getElementById('cat_realtor').value = 65;
+                document.getElementById('cat_contractor').value = 60;
+                document.getElementById('cat_seller').value = 55;
+                document.getElementById('cat_buyer').value = 75;
+                document.getElementById('cat_lead').value = 70;
+                document.getElementById('cat_network').value = 80;
+                document.getElementById('cat_offers').value = 60;
+                document.getElementById('cat_property').value = 65;
+                document.getElementById('cat_closing').value = 70;
+            } else if (level === 'advanced') {
+                document.getElementById('overallScore').value = 85;
+                document.getElementById('difficulty').value = 'hard';
+                document.getElementById('cat_market').value = 90;
+                document.getElementById('cat_realtor').value = 85;
+                document.getElementById('cat_contractor').value = 80;
+                document.getElementById('cat_seller').value = 88;
+                document.getElementById('cat_buyer').value = 92;
+                document.getElementById('cat_lead').value = 85;
+                document.getElementById('cat_network').value = 80;
+                document.getElementById('cat_offers').value = 75;
+                document.getElementById('cat_property').value = 88;
+                document.getElementById('cat_closing').value = 90;
+            }
+            
+            // Fill sample customer data
+            if (!document.getElementById('customerName').value) {
+                document.getElementById('customerName').value = 'Sample Customer';
+            }
+            if (!document.getElementById('customerEmail').value) {
+                document.getElementById('customerEmail').value = 'customer@example.com';
+            }
+        }
+        
+        function generateStudyPlan() {
+            // Get customer info
+            const name = document.getElementById('customerName').value;
+            const email = document.getElementById('customerEmail').value;
+            
+            if (!name || !email) {
+                alert('Please enter customer name and email');
+                return;
+            }
+            
+            // Get quiz results
+            const percentage = parseInt(document.getElementById('overallScore').value);
+            const difficulty = document.getElementById('difficulty').value;
+            
+            if (!percentage || percentage < 0 || percentage > 100) {
+                alert('Please enter a valid overall score (0-100)');
+                return;
+            }
+            
+            // Get category results
+            const categoryMap = {
+                'Market Analysis': 'cat_market',
+                'Realtor Relationships': 'cat_realtor',
+                'Contractor Partnerships': 'cat_contractor',
+                'Seller Lead Generation': 'cat_seller',
+                'Buyer Marketing': 'cat_buyer',
+                'Lead Management': 'cat_lead',
+                'Networking': 'cat_network',
+                'Making Offers': 'cat_offers',
+                'Property Marketing': 'cat_property',
+                'Closing': 'cat_closing'
+            };
+            
+            const categoryResults = {};
+            for (const [category, inputId] of Object.entries(categoryMap)) {
+                const value = document.getElementById(inputId).value;
+                if (value) {
+                    const percent = parseInt(value);
+                    // Convert percentage to correct/total format
+                    categoryResults[category] = {
+                        correct: percent,
+                        total: 100
+                    };
+                }
+            }
+            
+            if (Object.keys(categoryResults).length === 0) {
+                alert('Please enter at least one category score');
+                return;
+            }
+            
+            // Prepare data for study plan generation
+            const quizResults = {
+                percentage: percentage,
+                difficulty: difficulty,
+                date: new Date()
+            };
+            
+            // Generate study plan using the imported function
+            const studyPlan = generatePremiumStudyPlan(quizResults, categoryResults, [], []);
+            
+            // Format as HTML
+            const htmlContent = formatStudyPlanHTML(studyPlan);
+            
+            // Download the file
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            const fileName = `Study-Plan-${name.replace(/\s+/g, '-')}-${new Date().toISOString().split('T')[0]}.html`;
+            a.download = fileName;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            // Show success message
+            document.getElementById('fileName').textContent = fileName;
+            document.getElementById('emailCustomer').textContent = email;
+            document.getElementById('outputSection').classList.add('active');
+            
+            // Scroll to output
+            document.getElementById('outputSection').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function resetForm() {
+            document.getElementById('customerName').value = '';
+            document.getElementById('customerEmail').value = '';
+            document.getElementById('overallScore').value = '';
+            document.getElementById('difficulty').value = 'medium';
+            
+            const categoryInputs = document.querySelectorAll('.category-input input');
+            categoryInputs.forEach(input => input.value = '');
+            
+            document.getElementById('outputSection').classList.remove('active');
+        }
+    </script>
+</body>
+</html>

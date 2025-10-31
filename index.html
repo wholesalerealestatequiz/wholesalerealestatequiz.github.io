@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wholesale Real Estate Mastery Quiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle-container">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+            <span class="theme-icon">🌙</span>
+        </button>
+    </div>
+
+    <!-- Home Page -->
+    <section id="homePage" class="page active">
+        <div class="container">
+            <div class="header-section">
+                <h1><i class="fas fa-home"></i> Wholesale Real Estate Mastery Quiz</h1>
+                <p class="subtitle">Test Your Wholesaling Knowledge & Strategic Thinking</p>
+            </div>
+
+            <div class="welcome-card">
+                <h2>Welcome, Future Real Estate Wholesaler!</h2>
+                <p>This comprehensive assessment evaluates your understanding of the 10-step wholesaling system and your ability to make strategic business decisions.</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <span class="feature-icon"><i class="fas fa-chart-line"></i></span>
+                        <h3>Market Analysis</h3>
+                        <p>Assess your ability to identify profitable markets</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon"><i class="fas fa-handshake"></i></span>
+                        <h3>Relationship Building</h3>
+                        <p>Test your networking and partnership strategies</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon"><i class="fas fa-file-contract"></i></span>
+                        <h3>Deal Structuring</h3>
+                        <p>Evaluate your offer-making and negotiation skills</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon"><i class="fas fa-rocket"></i></span>
+                        <h3>Business Scaling</h3>
+                        <p>Measure your systems and automation knowledge</p>
+                    </div>
+                </div>
+
+                <div class="quiz-stats">
+                    <div class="stat-box">
+                        <div class="stat-number">50</div>
+                        <div class="stat-label">Total Questions</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">10</div>
+                        <div class="stat-label">Categories</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">15-40</div>
+                        <div class="stat-label">Minutes</div>
+                    </div>
+                </div>
+
+                <div class="quiz-info">
+                    <h3><i class="fas fa-book-open"></i> Based on Industry-Leading Resources</h3>
+                    <p style="margin-bottom: 20px; color: var(--text-secondary); font-size: 1rem;">Questions derived from the most trusted wholesaling books and expert recommendations:</p>
+                    <ul class="info-list">
+                        <li><i class="fas fa-star"></i> <strong>Million Dollar Wholesaler</strong> by James Hodges — Comprehensive wholesaling mastery</li>
+                        <li><i class="fas fa-star"></i> <strong>How to Wholesale Real Estate</strong> by Shawn D. Jackson — Practical step-by-step strategies</li>
+                        <li><i class="fas fa-star"></i> <strong>The Wholesaler's Bible</strong> by Jack Miller — Foundation to advanced techniques</li>
+                        <li><i class="fas fa-star"></i> <strong>You Can't Wholesale After This</strong> by Greg Helbeck — Complete system approach</li>
+                        <li><i class="fas fa-star"></i> <strong>Real Estate Wholesaling: Your First Deal in 30 Days</strong> by Wendy Patton — Fast-track guide</li>
+                    </ul>
+                </div>
+            </div>
+
+            <button id="startBtn" class="primary-btn">Configure & Start Quiz</button>
+        </div>
+    </section>
+
+    <!-- Configuration Page -->
+    <section id="configPage" class="page">
+        <div class="container">
+            <h1>⚙️ Configure Your Assessment</h1>
+            <p class="page-description">Customize your quiz experience based on your learning goals</p>
+
+            <div class="config-section">
+                <h2>📚 Select Topics to Include</h2>
+                <p class="section-hint">Choose the wholesaling areas you want to be tested on</p>
+                <div id="topicCheckboxes" class="checkbox-grid">
+                    <!-- Dynamically populated -->
+                </div>
+            </div>
+
+            <div class="config-section">
+                <h2>📊 Difficulty Level</h2>
+                <p class="section-hint">Select the complexity of questions</p>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="difficulty" value="easy">
+                        <span class="radio-custom"></span>
+                        <div class="radio-content">
+                            <strong>Easy</strong>
+                            <small>Foundational concepts and basic principles</small>
+                        </div>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="difficulty" value="medium" checked>
+                        <span class="radio-custom"></span>
+                        <div class="radio-content">
+                            <strong>Medium</strong>
+                            <small>Applied scenarios and strategic decisions</small>
+                        </div>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="difficulty" value="hard">
+                        <span class="radio-custom"></span>
+                        <div class="radio-content">
+                            <strong>Hard</strong>
+                            <small>Complex situations requiring expert judgment</small>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="config-section">
+                <h2>🔢 Number of Questions</h2>
+                <div class="slider-container">
+                    <input type="range" id="questionCount" min="10" max="50" value="25" step="5">
+                    <div class="slider-value">
+                        <span id="questionCountValue">25</span> questions
+                    </div>
+                </div>
+            </div>
+
+            <div class="config-section">
+                <h2>⏱️ Time Limit</h2>
+                <p class="section-hint">Challenge yourself with a timer or take your time</p>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="timeLimit" value="none" checked>
+                        <span class="radio-custom"></span>
+                        <div class="radio-content">
+                            <strong>No Time Limit</strong>
+                            <small>Take as much time as you need</small>
+                        </div>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="timeLimit" value="20">
+                        <span class="radio-custom"></span>
+                        <div class="radio-content">
+                            <strong>20 Minutes</strong>
+                            <small>Quick assessment mode</small>
+                        </div>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="timeLimit" value="40">
+                        <span class="radio-custom"></span>
+                        <div class="radio-content">
+                            <strong>40 Minutes</strong>
+                            <small>Comprehensive assessment mode</small>
+                        </div>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="timeLimit" value="60">
+                        <span class="radio-custom"></span>
+                        <div class="radio-content">
+                            <strong>60 Minutes</strong>
+                            <small>Full professional assessment</small>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="config-actions">
+                <button id="backToHomeBtn" class="secondary-btn">← Back</button>
+                <button id="beginQuizBtn" class="primary-btn">Begin Assessment →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Overlay -->
+    <div id="countdownOverlay" class="countdown-overlay" style="display: none;">
+        <div class="countdown-content">
+            <h2>Get Ready!</h2>
+            <div id="countdownNumber" class="countdown-number">3</div>
+            <p class="countdown-message">Quiz starting...</p>
+        </div>
+    </div>
+
+    <!-- Quiz Page -->
+    <section id="quizPage" class="page">
+        <div class="quiz-container">
+            <!-- Timer Display -->
+            <div id="timerDisplay" class="timer-display" style="display: none;">
+                <span class="timer-icon">⏱️</span>
+                <span id="timerText">00:00</span>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-info">
+                    <span id="questionProgress">Question 1 of 25</span>
+                    <span id="categoryDisplay" class="category-badge">Market Analysis</span>
+                </div>
+                <div class="progress-bar">
+                    <div id="progressFill" class="progress-fill"></div>
+                </div>
+            </div>
+
+            <!-- Question Card -->
+            <div id="questionCard" class="question-card">
+                <div class="question-header">
+                    <span id="questionType" class="question-type-badge">Single Select</span>
+                    <span id="questionDifficulty" class="difficulty-badge">Medium</span>
+                </div>
+                <h2 id="questionText" class="question-text"></h2>
+                <div id="questionContext" class="question-context"></div>
+                <div id="optionsContainer" class="options-container">
+                    <!-- Options dynamically inserted -->
+                </div>
+                <div id="multiSelectHint" class="multi-select-hint" style="display: none;">
+                    ℹ️ This question may have multiple correct answers. Select all that apply.
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="quiz-navigation">
+                <button id="prevBtn" class="nav-btn secondary-btn">← Previous</button>
+                <button id="nextBtn" class="nav-btn primary-btn">Next →</button>
+                <button id="submitBtn" class="submit-btn primary-btn" style="display: none;">Submit Assessment</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Page -->
+    <section id="resultsPage" class="page">
+        <div class="container">
+            <div class="results-header">
+                <h1><i class="fas fa-chart-bar"></i> Assessment Results</h1>
+                <p class="results-subtitle">Your Wholesale Real Estate Knowledge Report</p>
+            </div>
+
+            <!-- Overall Score -->
+            <div class="score-display">
+                <div class="score-circle">
+                    <div class="score-value" id="finalScore">0%</div>
+                    <div class="score-label">Overall Score</div>
+                </div>
+                <div class="score-details">
+                    <div class="score-stat">
+                        <span class="stat-icon"><i class="fas fa-check-circle"></i></span>
+                        <div>
+                            <strong id="correctCount">0</strong>
+                            <small>Correct</small>
+                        </div>
+                    </div>
+                    <div class="score-stat">
+                        <span class="stat-icon"><i class="fas fa-times-circle"></i></span>
+                        <div>
+                            <strong id="incorrectCount">0</strong>
+                            <small>Incorrect</small>
+                        </div>
+                    </div>
+                    <div class="score-stat">
+                        <span class="stat-icon"><i class="fas fa-trophy"></i></span>
+                        <div>
+                            <strong id="performanceLevel">-</strong>
+                            <small>Performance</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category Performance -->
+            <div class="results-section">
+                <h2><i class="fas fa-chart-line"></i> Category Performance Analysis</h2>
+                <div id="categoryCharts" class="category-charts">
+                    <!-- Dynamically generated charts -->
+                </div>
+            </div>
+
+            <!-- Strategic Analysis -->
+            <div class="results-section">
+                <h2><i class="fas fa-bullseye"></i> Strategic Analysis</h2>
+                <div id="strategicAnalysis" class="analysis-content">
+                    <!-- Generated analysis -->
+                </div>
+            </div>
+
+            <!-- Detailed Feedback -->
+            <div class="results-section">
+                <h2><i class="fas fa-clipboard-list"></i> Question-by-Question Review</h2>
+                <button id="toggleDetailedFeedback" class="toggle-btn secondary-btn">
+                    Show Detailed Review
+                </button>
+                <div id="detailedFeedback" class="detailed-feedback" style="display: none;">
+                    <!-- Question reviews -->
+                </div>
+            </div>
+
+            <!-- Recommendations -->
+            <div class="results-section">
+                <h2><i class="fas fa-lightbulb"></i> Study Recommendations</h2>
+                <div id="recommendations" class="recommendations-content">
+                    <!-- Generated recommendations -->
+                </div>
+            </div>
+
+            <!-- Premium Study Plan Offer -->
+            <div class="results-section premium-offer-section" id="premiumOfferSection">
+                <div class="premium-offer-card">
+                    <div class="premium-badge"><i class="fas fa-crown"></i> PREMIUM</div>
+                    <h2><i class="fas fa-brain"></i> Get Your Comprehensive Performance Analysis</h2>
+                    <p class="premium-description">Unlock an in-depth analysis of your decision-making patterns, strategic thinking gaps, and personalized improvement strategies based on your unique results.</p>
+                    
+                    <div class="premium-features">
+                        <div class="feature-comparison">
+                            <div class="comparison-column free-column">
+                                <h3><i class="fas fa-check"></i> Free (Current)</h3>
+                                <ul>
+                                    <li>Overall score and category breakdown</li>
+                                    <li>Basic strengths and weaknesses</li>
+                                    <li>Top 3 focus area recommendations</li>
+                                    <li>Complete question-by-question review</li>
+                                </ul>
+                            </div>
+                            <div class="comparison-column premium-column">
+                                <h3><i class="fas fa-star"></i> Premium ($14.99)</h3>
+                                <ul>
+                                    <li><strong>Deep-Dive Thinking Pattern Analysis</strong> — How you approach problems vs. how you should</li>
+                                    <li><strong>Decision-Making Framework Assessment</strong> — Where your logic breaks down and why</li>
+                                    <li><strong>Strategic Gaps Identification</strong> — Specific blind spots holding you back</li>
+                                    <li><strong>Comprehensive Strength Analysis</strong> — Your natural advantages and how to leverage them</li>
+                                    <li><strong>Weakness Breakdown with Context</strong> — Not just what's wrong, but WHY and how to fix it</li>
+                                    <li><strong>Personalized Improvement Roadmap</strong> — Clear direction on what to focus on (your choice how to improve)</li>
+                                    <li><strong>Expert-Level Commentary</strong> — Professional insights on each category</li>
+                                    <li><strong>Downloadable PDF Report</strong> (15-25 pages) — Keep forever, review anytime</li>
+                                    <li><strong>Book Chapter References</strong> — Exact pages mapped to your gaps</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-sample">
+                        <h4>📖 Book Sources Included:</h4>
+                        <ul class="book-sources">
+                            <li><strong>"10 Steps to Wholesaling 10 Houses a Month"</strong> - Jason Prescott</li>
+                            <li><strong>"The Book on Flipping Houses"</strong> - J Scott</li>
+                            <li><strong>"Buy, Rehab, Rent, Refinance, Repeat (BRRRR)"</strong> - David Greene</li>
+                            <li><strong>"Real Estate Wholesaling Bible"</strong> - Than Merrill</li>
+                            <li><strong>"The Millionaire Real Estate Investor"</strong> - Gary Keller</li>
+                        </ul>
+                    </div>
+
+                    <div class="premium-cta">
+                        <button id="unlockPremiumBtn" class="premium-btn">
+                            🔓 Get Your Personalized Study Plan - $14.99
+                        </button>
+                        <p class="secure-notice">🔒 Secure payment via PayPal • Delivered within 24 hours</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Premium Order Modal (Hidden by default) -->
+            <div id="premiumOrderModal" class="modal" style="display: none;">
+                <div class="modal-content premium-order-content">
+                    <span class="close-modal" id="closePremiumModal">&times;</span>
+                    <div class="modal-icon">📋</div>
+                    <h2>Complete Your Order</h2>
+                    <p class="modal-description">Follow these 2 simple steps to receive your personalized study plan:</p>
+                    
+                    <div class="order-steps">
+                        <div class="order-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3><i class="fas fa-dollar-sign"></i> Complete PayPal Payment</h3>
+                                <p>Pay $14.99 securely through PayPal and take a screenshot of the confirmation</p>
+                                <a href="YOUR_PAYPAL_LINK_HERE" target="_blank" class="step-btn paypal-btn">
+                                    Pay with PayPal →
+                                </a>
+                                <p class="step-hint">✓ Save the payment confirmation screenshot for Step 2</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step-divider">↓</div>
+                        
+                        <div class="order-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3><i class="fas fa-download"></i> Download Your Quiz Results</h3>
+                                <p>Save your quiz data file - you'll upload this in the next step</p>
+                                <button onclick="downloadQuizResults()" class="step-btn download-btn">
+                                    <i class="fas fa-file-download"></i> Download Results File
+                                </button>
+                                <p class="step-hint" id="downloadStatus">Click to download your results as a .txt file</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step-divider">↓</div>
+                        
+                        <div class="order-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3><i class="fas fa-upload"></i> Submit Order Form</h3>
+                                <p>Upload payment screenshot + quiz results file</p>
+                                <a href="YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" class="step-btn google-form-btn">
+                                    Open Order Form →
+                                </a>
+                                <p class="step-hint">✓ We'll email your comprehensive analysis within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <p class="support-text">Questions? Email us at: <strong>your-email@example.com</strong></p>
+                        <button onclick="document.getElementById('premiumOrderModal').style.display='none'" class="modal-close-btn">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="results-actions">
+                <button id="retakeBtn" class="secondary-btn">↻ Retake Assessment</button>
+                <button id="newConfigBtn" class="primary-btn">Configure New Assessment</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="questions.js"></script>
+    <script src="premium-study-plan.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
