@@ -928,7 +928,8 @@ function storeResultsForPremium() {
     console.log('Results stored for premium study plan generation');
 }
 
-function downloadQuizResults() {
+// Make downloadQuizResults globally accessible
+window.downloadQuizResults = function() {
     // Generate comprehensive quiz results data for the customer to upload
     
     // Check if quiz data exists
@@ -1088,7 +1089,7 @@ function downloadQuizResults() {
         statusElement.innerHTML = '<i class="fas fa-check-circle"></i> Downloaded! Upload this file in Step 3';
         statusElement.style.color = '#10b981';
     }
-}
+};
 
 function generateAndDownloadStudyPlan() {
     // Check if premium study plan script is loaded
