@@ -1589,7 +1589,11 @@ body::before {
     color: var(--text-secondary);
     cursor: pointer;
     transition: var(--transition);
-    z-index: 10;
+    z-index: 9999;
+    background: transparent;
+    border: none;
+    padding: 5px 10px;
+    line-height: 1;
 }
 
 .close-modal:hover {
