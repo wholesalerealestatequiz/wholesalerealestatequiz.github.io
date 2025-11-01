@@ -930,6 +930,10 @@ function storeResultsForPremium() {
 
 // Make downloadQuizResults globally accessible
 window.downloadQuizResults = function() {
+    console.log('downloadQuizResults called');
+    console.log('state:', state);
+    console.log('state.currentQuestions:', state.currentQuestions);
+    
     // Generate comprehensive quiz results data for the customer to upload
     
     // Check if quiz data exists
@@ -937,6 +941,8 @@ window.downloadQuizResults = function() {
         alert('Please complete the quiz first before downloading results!');
         return;
     }
+    
+    console.log('Starting file generation...');
     
     const categoryResults = {};
     const detailedAnswers = [];
@@ -1073,6 +1079,7 @@ window.downloadQuizResults = function() {
     fileContent += '='.repeat(60);
     
     // Create and download the file
+    console.log('Creating blob and downloading...');
     const blob = new Blob([fileContent], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -1082,6 +1089,7 @@ window.downloadQuizResults = function() {
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
+    console.log('Download triggered successfully!');
     
     // Update the status message
     const statusElement = document.getElementById('downloadStatus');
