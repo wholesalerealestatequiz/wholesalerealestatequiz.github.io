@@ -795,7 +795,8 @@ function attachEventListeners() {
     // Premium feature
     const unlockPremiumBtn = document.getElementById('unlockPremiumBtn');
     const closePremiumModal = document.getElementById('closePremiumModal');
-    const premiumModal = document.getElementById('premiumSuccessModal');
+    const premiumOrderModal = document.getElementById('premiumOrderModal');
+    const premiumSuccessModal = document.getElementById('premiumSuccessModal');
     
     if (unlockPremiumBtn) {
         unlockPremiumBtn.addEventListener('click', handlePremiumPurchase);
@@ -803,14 +804,17 @@ function attachEventListeners() {
     
     if (closePremiumModal) {
         closePremiumModal.addEventListener('click', () => {
-            premiumModal.style.display = 'none';
+            premiumOrderModal.style.display = 'none';
         });
     }
     
-    // Close modal on outside click
+    // Close modal on outside click (for the order modal)
     window.addEventListener('click', (e) => {
-        if (e.target === premiumModal) {
-            premiumModal.style.display = 'none';
+        if (e.target === premiumOrderModal) {
+            premiumOrderModal.style.display = 'none';
+        }
+        if (e.target === premiumSuccessModal) {
+            premiumSuccessModal.style.display = 'none';
         }
     });
 }
