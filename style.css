@@ -1565,9 +1565,12 @@ body::before {
     padding: 40px;
     border-radius: var(--radius-xl);
     max-width: 600px;
+    max-height: 85vh;
     position: relative;
     box-shadow: var(--shadow-xl);
     animation: modalSlideIn 0.3s ease-out;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 @keyframes modalSlideIn {
@@ -2041,7 +2044,9 @@ body::before {
     }
     
     .modal-content {
-        margin: 20% auto;
+        margin: 20px auto;
         padding: 30px 20px;
+        max-height: 90vh;
+        overflow-y: auto;
     }
 }
