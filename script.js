@@ -1019,7 +1019,7 @@ window.downloadQuizResults = function() {
             completedDate: new Date().toISOString(),
             difficulty: state.config.difficulty,
             totalQuestions: state.currentQuestions.length,
-            selectedCategories: state.selectedCategories
+            selectedCategories: state.config.topics || ['All Categories']
         },
         performance: {
             overallScore: overallScore,
@@ -1045,7 +1045,7 @@ window.downloadQuizResults = function() {
     fileContent += `Completed: ${new Date(resultsData.testInfo.completedDate).toLocaleString()}\n`;
     fileContent += `Difficulty: ${resultsData.testInfo.difficulty}\n`;
     fileContent += `Total Questions: ${resultsData.testInfo.totalQuestions}\n`;
-    fileContent += `Categories: ${resultsData.testInfo.selectedCategories.join(', ')}\n\n`;
+    fileContent += `Categories: ${(resultsData.testInfo.selectedCategories || ['All Categories']).join(', ')}\n\n`;
     
     fileContent += 'OVERALL PERFORMANCE\n';
     fileContent += '-'.repeat(60) + '\n';
