@@ -930,6 +930,13 @@ function storeResultsForPremium() {
 
 function downloadQuizResults() {
     // Generate comprehensive quiz results data for the customer to upload
+    
+    // Check if quiz data exists
+    if (!state.currentQuestions || state.currentQuestions.length === 0) {
+        alert('Please complete the quiz first before downloading results!');
+        return;
+    }
+    
     const categoryResults = {};
     const detailedAnswers = [];
     
