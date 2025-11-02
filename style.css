@@ -1555,8 +1555,8 @@ body::before {
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.8);
+    /* Removed backdrop-filter for better performance */
 }
 
 .modal-content {
@@ -1568,9 +1568,12 @@ body::before {
     max-height: 85vh;
     position: relative;
     box-shadow: var(--shadow-xl);
-    animation: modalSlideIn 0.3s ease-out;
+    animation: modalSlideIn 0.2s ease-out;
     overflow-y: auto;
     overflow-x: hidden;
+    /* Hardware acceleration for smoother animation */
+    transform: translateZ(0);
+    will-change: transform, opacity;
 }
 
 @keyframes modalSlideIn {
@@ -1606,6 +1609,9 @@ body::before {
 
 .premium-order-content {
     max-width: 650px;
+    /* Smooth scrolling optimization */
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
 }
 
 .modal-icon {
