@@ -891,12 +891,6 @@ function handlePremiumPurchase() {
     
     // Store results in sessionStorage for later reference if needed
     storeResultsForPremium();
-    
-    // Generate and populate result code for mobile users (Upgrade 4)
-    const resultCodeTextarea = document.getElementById('resultCodeTextarea');
-    if (resultCodeTextarea) {
-        resultCodeTextarea.value = generateResultCode();
-    }
 }
 
 function storeResultsForPremium() {
@@ -1277,60 +1271,3 @@ window.addEventListener('beforeunload', (e) => {
         return ''; // Some browsers show this message
     }
 });
-
-// ============================================
-// UPGRADE 4: MOBILE-FRIENDLY COPY CODE
-// Alternative to file download for mobile users
-// ============================================
-
-/**
- * Generate base64-encoded result code for easy sharing
- */
-function generateResultCode() {
-    const resultData = {
-        score: state.userAnswers.filter(a => a.correct).length,
-        total: state.currentQuestions.length,
-        timestamp: new Date().toISOString(),
-        categories: state.config.topics || ['All Topics'],
-        difficulty: state.config.difficulty
-    };
-    
-    // Encode to base64
-    const jsonString = JSON.stringify(resultData);
-    const base64Code = btoa(jsonString);
-    
-    return base64Code;
-}
-
-/**
- * Copy result code to clipboard
- */
-function copyResultCode() {
-    const code = generateResultCode();
-    const textarea = document.getElementById('resultCodeTextarea');
-    
-    if (textarea) {
-        textarea.value = code;
-        textarea.select();
-        textarea.setSelectionRange(0, 99999); // For mobile
-        
-        try {
-            document.execCommand('copy');
-            
-            // Update button feedback
-            const copyBtn = document.getElementById('copyCodeBtn');
-            if (copyBtn) {
-                const originalText = copyBtn.innerHTML;
-                copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
-                copyBtn.style.background = '#10b981';
-                
-                setTimeout(() => {
-                    copyBtn.innerHTML = originalText;
-                    copyBtn.style.background = '#2563eb';
-                }, 2000);
-            }
-        } catch (err) {
-            alert('Failed to copy. Please manually select and copy the code above.');
-        }
-    }
-}
