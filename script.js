@@ -3,6 +3,26 @@
 // Comprehensive State Management and Quiz Engine
 // ============================================
 
+// ============================================
+// CONFIG INJECTION
+// Load values from config.js into HTML elements
+// ============================================
+document.addEventListener('DOMContentLoaded', () => {
+    // Inject config values into DOM
+    if (typeof APP_CONFIG !== 'undefined') {
+        // Payment & Form Links
+        const paypalLink = document.getElementById('paypalLink');
+        const googleFormLink = document.getElementById('googleFormLink');
+        const supportEmail = document.getElementById('supportEmail');
+        
+        if (paypalLink) paypalLink.href = APP_CONFIG.PAYPAL_LINK;
+        if (googleFormLink) googleFormLink.href = APP_CONFIG.GOOGLE_FORM_LINK;
+        if (supportEmail) supportEmail.textContent = APP_CONFIG.SUPPORT_EMAIL;
+        
+        console.log('✓ Config loaded successfully');
+    }
+});
+
 /**
  * Application State Management
  * Centralized state object tracking all quiz data
@@ -20,9 +40,11 @@ const state = {
     timer: {
         intervalId: null,
         remainingSeconds: 0,
-        startTime: null
+        startTime: null,
+        endTime: null  // Added for Date.now() timer approach
     },
-    theme: 'light'
+    theme: 'light',
+    hasDownloadedResults: false  // Track download status for beforeunload warning
 };
 
 // DOM Element References (cached for performance)
@@ -232,18 +254,24 @@ function beginQuiz() {
     loadQuestion();
 }
 
+// ============================================
+// UPGRADE 3: FIX TIMER DRIFT
+// Use Date.now() instead of setInterval decrement
+// Prevents timer slowdown when tab is backgrounded
+// ============================================
 function setupTimer(minutes) {
-    state.timer.remainingSeconds = minutes * 60;
+    const totalSeconds = minutes * 60;
     state.timer.startTime = Date.now();
+    state.timer.endTime = state.timer.startTime + (totalSeconds * 1000);
     elements.timerDisplay.style.display = 'flex';
     
     updateTimerDisplay();
     
     state.timer.intervalId = setInterval(() => {
-        state.timer.remainingSeconds--;
         updateTimerDisplay();
         
-        if (state.timer.remainingSeconds <= 0) {
+        const now = Date.now();
+        if (now >= state.timer.endTime) {
             clearInterval(state.timer.intervalId);
             submitQuiz();
         }
@@ -251,16 +279,20 @@ function setupTimer(minutes) {
 }
 
 function updateTimerDisplay() {
-    const minutes = Math.floor(state.timer.remainingSeconds / 60);
-    const seconds = state.timer.remainingSeconds % 60;
+    const now = Date.now();
+    const remainingMs = Math.max(0, state.timer.endTime - now);
+    const remainingSeconds = Math.ceil(remainingMs / 1000);
+    
+    const minutes = Math.floor(remainingSeconds / 60);
+    const seconds = remainingSeconds % 60;
     const timeStr = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
     elements.timerText.textContent = timeStr;
     
     // Add warning classes
     elements.timerDisplay.classList.remove('warning', 'danger');
-    if (state.timer.remainingSeconds <= 60) {
+    if (remainingSeconds <= 60) {
         elements.timerDisplay.classList.add('danger');
-    } else if (state.timer.remainingSeconds <= 300) {
+    } else if (remainingSeconds <= 300) {
         elements.timerDisplay.classList.add('warning');
     }
 }
@@ -859,6 +891,12 @@ function handlePremiumPurchase() {
     
     // Store results in sessionStorage for later reference if needed
     storeResultsForPremium();
+    
+    // Generate and populate result code for mobile users (Upgrade 4)
+    const resultCodeTextarea = document.getElementById('resultCodeTextarea');
+    if (resultCodeTextarea) {
+        resultCodeTextarea.value = generateResultCode();
+    }
 }
 
 function storeResultsForPremium() {
@@ -1097,6 +1135,9 @@ window.downloadQuizResults = function() {
         statusElement.innerHTML = '<i class="fas fa-check-circle"></i> Downloaded! Upload this file in Step 3';
         statusElement.style.color = '#10b981';
     }
+    
+    // Mark that results have been downloaded (prevents beforeunload warning)
+    state.hasDownloadedResults = true;
 };
 
 function generateAndDownloadStudyPlan() {
@@ -1218,4 +1259,78 @@ function initializeStripePayment() {
     // const stripe = Stripe('your_publishable_key');
     // const elements = stripe.elements();
     // Implementation here
+}
+
+// ============================================
+// UPGRADE 2: PREVENT DATA LOSS
+// Warn users before leaving page during quiz
+// ============================================
+window.addEventListener('beforeunload', (e) => {
+    // Only warn if quiz is in progress and results not downloaded
+    const quizInProgress = state.currentQuestions.length > 0 && !state.hasDownloadedResults;
+    const onQuizPage = elements.quizPage && elements.quizPage.classList.contains('active');
+    const onResultsPage = elements.resultsPage && elements.resultsPage.classList.contains('active');
+    
+    if (quizInProgress && (onQuizPage || onResultsPage)) {
+        e.preventDefault();
+        e.returnValue = ''; // Chrome requires returnValue to be set
+        return ''; // Some browsers show this message
+    }
+});
+
+// ============================================
+// UPGRADE 4: MOBILE-FRIENDLY COPY CODE
+// Alternative to file download for mobile users
+// ============================================
+
+/**
+ * Generate base64-encoded result code for easy sharing
+ */
+function generateResultCode() {
+    const resultData = {
+        score: state.userAnswers.filter(a => a.correct).length,
+        total: state.currentQuestions.length,
+        timestamp: new Date().toISOString(),
+        categories: state.config.topics || ['All Topics'],
+        difficulty: state.config.difficulty
+    };
+    
+    // Encode to base64
+    const jsonString = JSON.stringify(resultData);
+    const base64Code = btoa(jsonString);
+    
+    return base64Code;
+}
+
+/**
+ * Copy result code to clipboard
+ */
+function copyResultCode() {
+    const code = generateResultCode();
+    const textarea = document.getElementById('resultCodeTextarea');
+    
+    if (textarea) {
+        textarea.value = code;
+        textarea.select();
+        textarea.setSelectionRange(0, 99999); // For mobile
+        
+        try {
+            document.execCommand('copy');
+            
+            // Update button feedback
+            const copyBtn = document.getElementById('copyCodeBtn');
+            if (copyBtn) {
+                const originalText = copyBtn.innerHTML;
+                copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                copyBtn.style.background = '#10b981';
+                
+                setTimeout(() => {
+                    copyBtn.innerHTML = originalText;
+                    copyBtn.style.background = '#2563eb';
+                }, 2000);
+            }
+        } catch (err) {
+            alert('Failed to copy. Please manually select and copy the code above.');
+        }
+    }
 }

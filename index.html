@@ -6,6 +6,7 @@
     <title>Wholesale Real Estate Mastery Quiz</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="config.js"></script>
 </head>
 <body>
     <!-- Theme Toggle -->
@@ -380,7 +381,7 @@
                             <div class="step-content">
                                 <h3><i class="fas fa-dollar-sign"></i> Complete PayPal Payment</h3>
                                 <p>Pay $14.99 securely through PayPal and take a screenshot of the confirmation</p>
-                                <a href="https://www.paypal.com/paypalme/1TheChosenOne1/14.99" target="_blank" class="step-btn paypal-btn">
+                                <a id="paypalLink" href="#" target="_blank" class="step-btn paypal-btn">
                                     Pay with PayPal →
                                 </a>
                                 <p class="step-hint">✓ Save the payment confirmation screenshot for Step 2</p>
@@ -398,6 +399,18 @@
                                     <i class="fas fa-file-download"></i> Download Results File
                                 </button>
                                 <p class="step-hint" id="downloadStatus">Click to download your results as a .txt file</p>
+                                
+                                <!-- Mobile Alternative: Copy Code -->
+                                <div class="mobile-copy-option" style="margin-top: 15px; padding: 12px; background: #f3f4f6; border-radius: 8px; border-left: 3px solid #2563eb;">
+                                    <p style="font-size: 0.9rem; margin-bottom: 8px; color: #6b7280;">
+                                        <strong>📱 On Mobile?</strong> Copy this code instead:
+                                    </p>
+                                    <textarea id="resultCodeTextarea" readonly style="width: 100%; height: 60px; font-family: monospace; font-size: 0.75rem; padding: 8px; border: 1px solid #d1d5db; border-radius: 4px; resize: none; background: white;" onclick="this.select()"></textarea>
+                                    <button id="copyCodeBtn" onclick="copyResultCode()" class="step-btn" style="margin-top: 8px; font-size: 0.9rem; padding: 8px 16px;">
+                                        <i class="fas fa-copy"></i> Copy Code
+                                    </button>
+                                    <p style="font-size: 0.8rem; color: #6b7280; margin-top: 6px;">Paste this code in the Google Form</p>
+                                </div>
                             </div>
                         </div>
                         
@@ -408,7 +421,7 @@
                             <div class="step-content">
                                 <h3><i class="fas fa-upload"></i> Submit Order Form</h3>
                                 <p>Upload payment screenshot + quiz results file</p>
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfBPsfhwxEm-QrXhxjGwETh8GiZBcF8tE7iwm-6OASVNNjoWg/viewform" target="_blank" class="step-btn google-form-btn">
+                                <a id="googleFormLink" href="#" target="_blank" class="step-btn google-form-btn">
                                     Open Order Form →
                                 </a>
                                 <p class="step-hint">✓ We'll verify payment and email your analysis within 24 hours</p>
@@ -417,7 +430,7 @@
                     </div>
                     
                     <div class="modal-footer">
-                        <p class="support-text">Questions? Email us at: <strong>wholesalerealestatequiz@gmail.com</strong></p>
+                        <p class="support-text">Questions? Email us at: <strong id="supportEmail">loading...</strong></p>
                         <button onclick="document.getElementById('premiumOrderModal').style.display='none'" class="modal-close-btn">Close</button>
                     </div>
                 </div>
