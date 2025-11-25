@@ -1185,14 +1185,29 @@ body {
 
 /* Premium Offer Section */
 .premium-offer-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border: none;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 2px solid var(--brand-primary);
     box-shadow: var(--shadow-xl);
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+}
+
+/* Add a subtle gradient overlay for premium feel that respects theme */
+.premium-offer-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--brand-primary), var(--brand-secondary));
 }
 
 .premium-offer-card {
     position: relative;
+    padding: 30px;
 }
 
 .premium-badge {
@@ -1209,7 +1224,7 @@ body {
 }
 
 .premium-offer-card h2 {
-    color: white;
+    color: var(--brand-primary);
     margin-bottom: 15px;
     font-size: 2rem;
 }
@@ -1218,6 +1233,7 @@ body {
     font-size: 1.15rem;
     margin-bottom: 30px;
     opacity: 0.95;
+    color: var(--text-secondary);
 }
 
 /* Feature Comparison */
@@ -1229,19 +1245,26 @@ body {
 }
 
 .comparison-column {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--bg-tertiary);
     padding: 25px;
     border-radius: var(--radius-lg);
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .premium-column {
-    background: rgba(255, 255, 255, 0.15);
-    border: 2px solid rgba(251, 191, 36, 0.5);
+    background: var(--bg-primary);
+    border: 2px solid var(--brand-secondary);
+    position: relative;
+}
+
+/* Dark mode adjustment for premium column background */
+body.dark-theme .premium-column {
+    background: rgba(59, 130, 246, 0.1); /* Subtle blue tint in dark mode */
+    border-color: var(--brand-primary);
 }
 
 .comparison-column h3 {
-    color: white;
+    color: var(--brand-primary);
     margin-bottom: 20px;
     font-size: 1.3rem;
 }
@@ -1257,6 +1280,12 @@ body {
     position: relative;
     font-size: 0.95rem;
     opacity: 0.9;
+    color: var(--text-secondary);
+}
+
+.premium-column li {
+    color: var(--text-primary);
+    font-weight: 500;
 }
 
 .free-column li::before {
@@ -1271,22 +1300,23 @@ body {
     content: '⭐';
     position: absolute;
     left: 0;
+    color: #fbbf24;
 }
 
 .premium-column li strong {
-    color: #fbbf24;
+    color: var(--brand-primary);
 }
 
 /* Premium Sample */
 .premium-sample {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--bg-tertiary);
     padding: 25px;
     border-radius: var(--radius-lg);
     margin: 25px 0;
 }
 
 .premium-sample h4 {
-    color: white;
+    color: var(--text-primary);
     margin-bottom: 15px;
     font-size: 1.2rem;
 }
@@ -1301,23 +1331,26 @@ body {
 
 .book-sources li {
     padding: 10px;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--bg-secondary);
     border-radius: var(--radius-sm);
     font-size: 0.9rem;
+    color: var(--text-secondary);
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 .book-sources li strong {
-    color: #fbbf24;
+    color: var(--brand-primary);
 }
 
 /* Premium Guarantee */
 .premium-guarantee {
-    background: rgba(16, 185, 129, 0.15);
-    border: 2px solid rgba(16, 185, 129, 0.3);
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
     padding: 20px;
     border-radius: var(--radius-lg);
     margin: 25px 0;
     text-align: center;
+    color: var(--text-primary);
 }
 
 .premium-guarantee p {
