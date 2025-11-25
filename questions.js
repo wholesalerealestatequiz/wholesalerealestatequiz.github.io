@@ -1,6 +1,6 @@
 // ============================================
 // WHOLESALE REAL ESTATE QUIZ - QUESTIONS DATABASE
-// 50+ Original Questions Based on Wholesaling Knowledge
+// 60+ Original Questions Based on Wholesaling Knowledge
 // ============================================
 
 /**
@@ -14,7 +14,7 @@
  * - category: knowledge domain
  * - difficulty: 'easy', 'medium', or 'hard'
  * - explanation: why the answer is correct
- * - sourceChapter: reference to book chapter
+ * - sourceChapter: reference to book chapter or topic
  */
 
 const questionBank = [
@@ -33,7 +33,7 @@ const questionBank = [
         category: "Market Analysis",
         difficulty: "easy",
         explanation: "Gridding helps you systematically analyze neighborhoods to find where investor activity is strongest. This data-driven approach identifies areas with high rental demand and active buying, which are ideal for wholesaling.",
-        sourceChapter: "Step One: Analyze Your Market"
+        sourceChapter: "Topic: Market Analysis Fundamentals"
     },
     {
         id: 2,
@@ -49,7 +49,7 @@ const questionBank = [
         category: "Market Analysis",
         difficulty: "medium",
         explanation: "Successful market analysis requires multiple data sources. City Data shows demographics, Rentometer validates rents, Zillow reveals listings, and Craigslist shows active rental demand. Combining these tools creates a comprehensive market picture.",
-        sourceChapter: "Step One: Analyze Your Market"
+        sourceChapter: "Topic: Market Analysis Fundamentals"
     },
     {
         id: 3,
@@ -66,7 +66,7 @@ const questionBank = [
         category: "Market Analysis",
         difficulty: "hard",
         explanation: "While distressed properties seem attractive, lack of rental activity suggests weak investor demand. Successful wholesaling requires buyer interest. Always verify that investors actually want properties in an area before heavily marketing there.",
-        sourceChapter: "Step One: Analyze Your Market"
+        sourceChapter: "Topic: Market Analysis Fundamentals"
     },
     {
         id: 4,
@@ -82,7 +82,7 @@ const questionBank = [
         category: "Market Analysis",
         difficulty: "medium",
         explanation: "Physical market research provides insights that online data cannot. You see actual conditions, spot opportunities, and develop the local expertise that positions you as a market authority to both sellers and investor-buyers.",
-        sourceChapter: "Step One: Analyze Your Market"
+        sourceChapter: "Topic: Market Analysis Fundamentals"
     },
 
     // ========== REALTOR RELATIONSHIPS ==========
@@ -100,7 +100,7 @@ const questionBank = [
         category: "Realtor Relationships",
         difficulty: "easy",
         explanation: "Mid-tier Realtors are often more motivated to collaborate on volume wholesale deals. Top agents may be too busy with high-commission clients, while new agents lack experience. Hungry mid-tier agents appreciate consistent deal flow.",
-        sourceChapter: "Step Two: Meet with Realtors"
+        sourceChapter: "Topic: Realtor Partnership Strategies"
     },
     {
         id: 6,
@@ -116,7 +116,7 @@ const questionBank = [
         category: "Realtor Relationships",
         difficulty: "medium",
         explanation: "Wholesalers provide Realtors with steady deal flow, fast closings, investor connections, and referral opportunities. This creates a mutually beneficial relationship where both parties profit from consistent collaboration.",
-        sourceChapter: "Step Two: Meet with Realtors"
+        sourceChapter: "Topic: Realtor Partnership Strategies"
     },
     {
         id: 7,
@@ -133,7 +133,7 @@ const questionBank = [
         category: "Realtor Relationships",
         difficulty: "hard",
         explanation: "Trust is built through consistent closings. When deals fall through, strengthen your buyer vetting process and maintain transparent communication. Showing improvement and reliability will rebuild the Realtor's confidence in working with you.",
-        sourceChapter: "Step Two: Meet with Realtors"
+        sourceChapter: "Topic: Realtor Partnership Strategies"
     },
     {
         id: 8,
@@ -149,7 +149,7 @@ const questionBank = [
         category: "Realtor Relationships",
         difficulty: "medium",
         explanation: "Investment-savvy Realtors speak the language of investors, provide relevant comps efficiently, have their own investor clientele, and understand wholesale transactions. These qualities make them valuable long-term partners.",
-        sourceChapter: "Step Two: Meet with Realtors"
+        sourceChapter: "Topic: Realtor Partnership Strategies"
     },
 
     // ========== CONTRACTOR PARTNERSHIPS ==========
@@ -167,7 +167,7 @@ const questionBank = [
         category: "Contractor Partnerships",
         difficulty: "easy",
         explanation: "Understanding rehab costs is fundamental to wholesaling success. It allows you to make competitive offers, avoid underestimating value, provide trustworthy data to buyers, and ensure deals are actually profitable for your investors.",
-        sourceChapter: "Step Three: Meet with General Contractors"
+        sourceChapter: "Topic: Rehab Estimation & Contractor Relations"
     },
     {
         id: 10,
@@ -183,7 +183,7 @@ const questionBank = [
         category: "Contractor Partnerships",
         difficulty: "medium",
         explanation: "Building relationships with multiple contractors and creating a local repair cost database protects you from inflated estimates. Overly conservative repair estimates force you to make unnecessarily low offers that won't be accepted.",
-        sourceChapter: "Step Three: Meet with General Contractors"
+        sourceChapter: "Topic: Rehab Estimation & Contractor Relations"
     },
     {
         id: 11,
@@ -200,7 +200,7 @@ const questionBank = [
         category: "Contractor Partnerships",
         difficulty: "medium",
         explanation: "This is a mutually beneficial arrangement common in wholesaling. Contractors get consistent work from your investor buyers, while you receive reliable estimates. This strengthens your business ecosystem without requiring upfront payment.",
-        sourceChapter: "Step Three: Meet with General Contractors"
+        sourceChapter: "Topic: Rehab Estimation & Contractor Relations"
     },
     {
         id: 12,
@@ -217,7 +217,7 @@ const questionBank = [
         category: "Contractor Partnerships",
         difficulty: "easy",
         explanation: "A comprehensive rehab checklist includes all major systems and renovation areas. This allows you to quickly estimate repair costs on properties and make informed offer decisions without waiting for contractor inspections.",
-        sourceChapter: "Step Three: Meet with General Contractors"
+        sourceChapter: "Topic: Rehab Estimation & Contractor Relations"
     },
 
     // ========== SELLER LEAD GENERATION ==========
@@ -235,7 +235,7 @@ const questionBank = [
         category: "Seller Lead Generation",
         difficulty: "easy",
         explanation: "Vanity numbers are memorable and reinforce your brand. When sellers see your marketing multiple times and need to sell quickly, an easy-to-remember number increases the likelihood they'll contact you instead of competitors.",
-        sourceChapter: "Step Four: Marketing Plan for Lead Generation"
+        sourceChapter: "Topic: Seller Acquisition Systems"
     },
     {
         id: 14,
@@ -251,7 +251,7 @@ const questionBank = [
         category: "Seller Lead Generation",
         difficulty: "medium",
         explanation: "Diversified marketing reaches different types of motivated sellers through various touchpoints. Some sellers respond to direct mail, others to signs or online ads. Testing multiple channels helps you find what works best in your market.",
-        sourceChapter: "Step Four: Marketing Plan for Lead Generation"
+        sourceChapter: "Topic: Seller Acquisition Systems"
     },
     {
         id: 15,
@@ -268,7 +268,7 @@ const questionBank = [
         category: "Seller Lead Generation",
         difficulty: "medium",
         explanation: "Empathetic messaging that addresses specific pain points (foreclosure) while offering a dignified solution resonates with motivated sellers. Aggressive or misleading messages damage your reputation and reduce response rates.",
-        sourceChapter: "Step Four: Marketing Plan for Lead Generation"
+        sourceChapter: "Topic: Seller Acquisition Systems"
     },
     {
         id: 16,
@@ -285,7 +285,7 @@ const questionBank = [
         category: "Seller Lead Generation",
         difficulty: "hard",
         explanation: "Creative networking and relationship-building are powerful guerrilla tactics. Illegal activities like hacking are never acceptable. Building authentic connections with professionals and community members creates consistent referral sources.",
-        sourceChapter: "Step Four: Marketing Plan for Lead Generation"
+        sourceChapter: "Topic: Seller Acquisition Systems"
     },
     {
         id: 17,
@@ -301,7 +301,7 @@ const questionBank = [
         category: "Seller Lead Generation",
         difficulty: "medium",
         explanation: "Marketing campaigns need time to generate responses. Sellers often see your message multiple times before acting. Four to six weeks allows enough time for initial responses while not wasting money on ineffective campaigns.",
-        sourceChapter: "Step Four: Marketing Plan for Lead Generation"
+        sourceChapter: "Topic: Seller Acquisition Systems"
     },
 
     // ========== BUYER MARKETING & LIST BUILDING ==========
@@ -319,7 +319,7 @@ const questionBank = [
         category: "Buyer Marketing & List Building",
         difficulty: "easy",
         explanation: "Understanding buyers' investment criteria helps you match properties efficiently. You need location preferences, price ranges, and property types. Personal financial details are intrusive and unnecessary for wholesale transactions.",
-        sourceChapter: "Step Five: Marketing Plan for Investors"
+        sourceChapter: "Topic: Buyer Disposition Strategies"
     },
     {
         id: 19,
@@ -336,7 +336,7 @@ const questionBank = [
         category: "Buyer Marketing & List Building",
         difficulty: "medium",
         explanation: "Personal connections at networking events are invaluable. Taking time to understand each investor's needs builds trust and positions you as a resource. Genuine relationship-building outperforms impersonal mass marketing.",
-        sourceChapter: "Step Five: Marketing Plan for Investors"
+        sourceChapter: "Topic: Buyer Disposition Strategies"
     },
     {
         id: 20,
@@ -352,7 +352,7 @@ const questionBank = [
         category: "Buyer Marketing & List Building",
         difficulty: "hard",
         explanation: "Referring buyers to other wholesalers when you can't serve them builds trust and community goodwill. These wholesalers often reciprocate with referrals, and buyers appreciate your helpfulness, strengthening long-term relationships.",
-        sourceChapter: "Step Five: Marketing Plan for Investors"
+        sourceChapter: "Topic: Buyer Disposition Strategies"
     },
     {
         id: 21,
@@ -369,7 +369,7 @@ const questionBank = [
         category: "Buyer Marketing & List Building",
         difficulty: "easy",
         explanation: "Different buyers prefer different communication methods. Using multiple channels ensures your deals reach buyers effectively. Top buyers may get calls, while broader lists receive emails or texts based on their preferences.",
-        sourceChapter: "Step Five: Marketing Plan for Investors"
+        sourceChapter: "Topic: Buyer Disposition Strategies"
     },
 
     // ========== LEAD MANAGEMENT & AUTOMATION ==========
@@ -387,7 +387,7 @@ const questionBank = [
         category: "Lead Management & Automation",
         difficulty: "easy",
         explanation: "CRM systems are essential for scaling. They organize contacts, track interactions, and automate follow-ups so no leads fall through the cracks. This efficiency allows you to manage higher deal volume without missing opportunities.",
-        sourceChapter: "Step Six: Develop a Lead Management System"
+        sourceChapter: "Topic: Lead Management & CRM"
     },
     {
         id: 23,
@@ -403,7 +403,7 @@ const questionBank = [
         category: "Lead Management & Automation",
         difficulty: "medium",
         explanation: "Technology scales better than manual processes. A CRM automates follow-ups, tracks lead status, and ensures consistent communication. This allows you to handle high lead volume while maintaining quality engagement with each prospect.",
-        sourceChapter: "Step Six: Develop a Lead Management System"
+        sourceChapter: "Topic: Lead Management & CRM"
     },
     {
         id: 24,
@@ -419,7 +419,7 @@ const questionBank = [
         category: "Lead Management & Automation",
         difficulty: "medium",
         explanation: "Comprehensive lead management requires mobile accessibility, automation, integration, and analytics. These features allow you to manage your entire wholesale pipeline efficiently from anywhere while tracking what's working.",
-        sourceChapter: "Step Six: Develop a Lead Management System"
+        sourceChapter: "Topic: Lead Management & CRM"
     },
     {
         id: 25,
@@ -435,7 +435,7 @@ const questionBank = [
         category: "Lead Management & Automation",
         difficulty: "medium",
         explanation: "Many sellers aren't immediately ready but may sell later. Automated nurturing sequences keep you top-of-mind without manual effort. When their situation changes and they're ready to sell, you'll be the first person they think of.",
-        sourceChapter: "Step Six: Develop a Lead Management System"
+        sourceChapter: "Topic: Lead Management & CRM"
     },
 
     // ========== NETWORKING & REIA ==========
@@ -453,7 +453,7 @@ const questionBank = [
         category: "Networking & REIA",
         difficulty: "easy",
         explanation: "REIAs are networking goldmines. You meet investor buyers, find service providers like contractors and lenders, learn from experienced members, and build credibility in your local investing community. Relationships drive wholesale success.",
-        sourceChapter: "Step Seven: Join Your Local REIA"
+        sourceChapter: "Topic: Networking & Community Building"
     },
     {
         id: 27,
@@ -469,7 +469,7 @@ const questionBank = [
         category: "Networking & REIA",
         difficulty: "medium",
         explanation: "Effective networking is about building relationships, not immediate transactions. Following up to understand each person's needs creates lasting partnerships. Lenders and contractors become part of your investor ecosystem, adding value beyond just buying deals.",
-        sourceChapter: "Step Seven: Join Your Local REIA"
+        sourceChapter: "Topic: Networking & Community Building"
     },
     {
         id: 28,
@@ -485,7 +485,7 @@ const questionBank = [
         category: "Networking & REIA",
         difficulty: "hard",
         explanation: "Starting your own REIA or investor meetup positions you as a community leader and creates massive networking opportunities. You become the hub connecting local investors, which naturally flows deals to you as the organizer and connector.",
-        sourceChapter: "Step Seven: Join Your Local REIA"
+        sourceChapter: "Topic: Networking & Community Building"
     },
     {
         id: 29,
@@ -501,7 +501,7 @@ const questionBank = [
         category: "Networking & REIA",
         difficulty: "medium",
         explanation: "REIAs attract entire investment ecosystems. Building relationships with service providers improves your deal flow, provides resources for your buyers, and creates referral partnerships. Your network's strength directly impacts your wholesale success.",
-        sourceChapter: "Step Seven: Join Your Local REIA"
+        sourceChapter: "Topic: Networking & Community Building"
     },
 
     // ========== MAKING OFFERS & NEGOTIATIONS ==========
@@ -519,7 +519,7 @@ const questionBank = [
         category: "Making Offers & Negotiations",
         difficulty: "easy",
         explanation: "The rule is to stay around 50% of ARV or less to ensure your investor buyers can profit after repairs and your wholesale fee. Going higher leaves insufficient margin for the buyer, making deals unattractive and difficult to sell.",
-        sourceChapter: "Step Eight: Prepare to Make Offers"
+        sourceChapter: "Topic: Deal Analysis & Negotiation"
     },
     {
         id: 31,
@@ -536,7 +536,7 @@ const questionBank = [
         category: "Making Offers & Negotiations",
         difficulty: "medium",
         explanation: "Acceptance rates in wholesaling are typically very low - often less than 5%. This is normal and expected. Success comes from making hundreds of offers consistently. Volume is the key to finding truly motivated sellers willing to accept wholesale prices.",
-        sourceChapter: "Step Eight: Prepare to Make Offers"
+        sourceChapter: "Topic: Deal Analysis & Negotiation"
     },
     {
         id: 32,
@@ -552,7 +552,7 @@ const questionBank = [
         category: "Making Offers & Negotiations",
         difficulty: "hard",
         explanation: "Rejection is part of wholesaling. Stay professional, briefly explain your offer reasoning, and keep communication open. Many initially offended sellers return later when their motivation increases and they realize your offer was actually fair.",
-        sourceChapter: "Step Eight: Prepare to Make Offers"
+        sourceChapter: "Topic: Deal Analysis & Negotiation"
     },
     {
         id: 33,
@@ -568,7 +568,7 @@ const questionBank = [
         category: "Making Offers & Negotiations",
         difficulty: "medium",
         explanation: "Inspection contingencies provide crucial protection for new wholesalers. They allow time to verify property condition, refine repair estimates, and secure a buyer. You can exit gracefully if the deal doesn't work, minimizing risk while you learn.",
-        sourceChapter: "Step Eight: Prepare to Make Offers"
+        sourceChapter: "Topic: Deal Analysis & Negotiation"
     },
     {
         id: 34,
@@ -584,7 +584,7 @@ const questionBank = [
         category: "Making Offers & Negotiations",
         difficulty: "hard",
         explanation: "Stick to your numbers based on ARV analysis. Overpaying makes deals unsellable to investor buyers. Present your $65k offer with clear reasoning. Truly motivated sellers will either accept or counter reasonably. Compromising on numbers kills wholesale margins.",
-        sourceChapter: "Step Eight: Prepare to Make Offers"
+        sourceChapter: "Topic: Deal Analysis & Negotiation"
     },
 
     // ========== PROPERTY MARKETING TO BUYERS ==========
@@ -602,7 +602,7 @@ const questionBank = [
         category: "Property Marketing to Buyers",
         difficulty: "easy",
         explanation: "Time is critical in wholesaling. Immediately marketing to your buyers list ensures you find a buyer quickly, verify the deal pricing is correct, and maintain momentum. Delays risk losing the contract or missing your closing deadline.",
-        sourceChapter: "Step Nine: Market Your Property to Buyers"
+        sourceChapter: "Topic: Disposition & Marketing"
     },
     {
         id: 36,
@@ -619,7 +619,7 @@ const questionBank = [
         category: "Property Marketing to Buyers",
         difficulty: "medium",
         explanation: "Backup buyers are essential in wholesaling. Communicate with the seller about a brief extension, then aggressively market to your entire list. Good deals attract multiple buyers. Your buyers list depth determines your ability to close even when Plan A fails.",
-        sourceChapter: "Step Nine: Market Your Property to Buyers"
+        sourceChapter: "Topic: Disposition & Marketing"
     },
     {
         id: 37,
@@ -635,7 +635,7 @@ const questionBank = [
         category: "Property Marketing to Buyers",
         difficulty: "medium",
         explanation: "Investor buyers make decisions based on numbers. Provide ARV, repair estimates, and profit potential upfront. This allows them to quickly evaluate if the deal meets their criteria. Clear financial data speeds up buyer decisions and closes deals faster.",
-        sourceChapter: "Step Nine: Market Your Property to Buyers"
+        sourceChapter: "Topic: Disposition & Marketing"
     },
     {
         id: 38,
@@ -651,7 +651,7 @@ const questionBank = [
         category: "Property Marketing to Buyers",
         difficulty: "hard",
         explanation: "Detailed buyer profiles create efficiency. You target the right buyers immediately, increasing closing speed and deal flow. Personalized outreach based on known preferences improves response rates and strengthens buyer relationships.",
-        sourceChapter: "Step Nine: Market Your Property to Buyers"
+        sourceChapter: "Topic: Disposition & Marketing"
     },
 
     // ========== CLOSING & ESCROW COORDINATION ==========
@@ -669,7 +669,7 @@ const questionBank = [
         category: "Closing & Escrow Coordination",
         difficulty: "easy",
         explanation: "Your closing partner is crucial to wholesale success. They must understand assignments, move quickly, offer fair pricing, and handle volume efficiently. Finding the right partner prevents deal delays and complications.",
-        sourceChapter: "Step Ten: Set Up Appointment with Closing Attorney or Title Agent"
+        sourceChapter: "Topic: Transaction Coordination & Closing"
     },
     {
         id: 40,
@@ -685,7 +685,7 @@ const questionBank = [
         category: "Closing & Escrow Coordination",
         difficulty: "medium",
         explanation: "Not all title companies are equal. Testing several reveals who offers the best combination of price, speed, expertise, and service. Having multiple trusted partners provides flexibility and ensures deals don't get delayed by capacity issues.",
-        sourceChapter: "Step Ten: Set Up Appointment with Closing Attorney or Title Agent"
+        sourceChapter: "Topic: Transaction Coordination & Closing"
     },
     {
         id: 41,
@@ -702,7 +702,7 @@ const questionBank = [
         category: "Closing & Escrow Coordination",
         difficulty: "hard",
         explanation: "Title issues are common but often resolvable. Collaborate with your title company to understand the problem and potential solutions. Many liens can be cleared, paid from proceeds, or negotiated. Professional problem-solving saves deals.",
-        sourceChapter: "Step Ten: Set Up Appointment with Closing Attorney or Title Agent"
+        sourceChapter: "Topic: Transaction Coordination & Closing"
     },
     {
         id: 42,
@@ -718,7 +718,7 @@ const questionBank = [
         category: "Closing & Escrow Coordination",
         difficulty: "medium",
         explanation: "Closing agents are central coordinators managing documents, schedules, funds, and legal compliance. They ensure smooth transactions while protecting everyone involved. A competent closing agent makes complex wholesale transactions simple and secure.",
-        sourceChapter: "Step Ten: Set Up Appointment with Closing Attorney or Title Agent"
+        sourceChapter: "Topic: Transaction Coordination & Closing"
     },
 
     // ========== MIXED STRATEGIC SCENARIOS ==========
@@ -736,7 +736,7 @@ const questionBank = [
         category: "Market Analysis",
         difficulty: "hard",
         explanation: "Wholesaling requires willing buyers. Active investor demand (Market B) is more valuable than abundant inventory without buyers. You can find deals anywhere, but consistent buyer demand ensures you can actually close and profit from your efforts.",
-        sourceChapter: "Step One: Analyze Your Market"
+        sourceChapter: "Topic: Market Analysis Fundamentals"
     },
     {
         id: 44,
@@ -752,7 +752,7 @@ const questionBank = [
         category: "Making Offers & Negotiations",
         difficulty: "hard",
         explanation: "Extended closing timelines increase risk. Buyers' situations change, financing expires, and motivation decreases over time. While you want flexibility, 60-90 day closings create uncertainty. Negotiate for 30-45 days when possible to maintain deal momentum.",
-        sourceChapter: "Step Eight: Prepare to Make Offers"
+        sourceChapter: "Topic: Deal Analysis & Negotiation"
     },
     {
         id: 45,
@@ -769,7 +769,7 @@ const questionBank = [
         category: "Lead Management & Automation",
         difficulty: "hard",
         explanation: "A 2% conversion rate can have multiple causes: poor lead quality from wrong marketing, offers too low for even motivated sellers, weak follow-up systems losing deals, or poor closing skills. Systematic analysis of your pipeline reveals where improvements are needed.",
-        sourceChapter: "Step Six: Develop a Lead Management System"
+        sourceChapter: "Topic: Lead Management & CRM"
     },
     {
         id: 46,
@@ -785,7 +785,7 @@ const questionBank = [
         category: "Networking & REIA",
         difficulty: "hard",
         explanation: "Successful wholesaling requires balance. Finding deals without buyers leaves you stuck. Having buyers without deals means no income. Lacking systems causes chaos. Master all three areas simultaneously to build a sustainable wholesale business.",
-        sourceChapter: "Step Seven: Join Your Local REIA"
+        sourceChapter: "Topic: Networking & Community Building"
     },
     {
         id: 47,
@@ -802,7 +802,7 @@ const questionBank = [
         category: "Making Offers & Negotiations",
         difficulty: "hard",
         explanation: "The formula is clear: 50% of ARV minus repairs. Here that's $70k minus $30k = $40k maximum. The $80k asking price leaves insufficient margin. Banks may negotiate, so make your $40k offer, but be prepared to walk away if they won't accept wholesale pricing.",
-        sourceChapter: "Step Eight: Prepare to Make Offers"
+        sourceChapter: "Topic: Deal Analysis & Negotiation"
     },
     {
         id: 48,
@@ -818,7 +818,7 @@ const questionBank = [
         category: "Lead Management & Automation",
         difficulty: "hard",
         explanation: "Hire to solve your biggest constraint. If you have deals but poor follow-through, hire coordination help. If you lack deals despite strong buyers, hire acquisition help. If you can't handle lead volume, hire marketing assistance. Identify your bottleneck first.",
-        sourceChapter: "Step Six: Develop a Lead Management System"
+        sourceChapter: "Topic: Lead Management & CRM"
     },
     {
         id: 49,
@@ -834,7 +834,7 @@ const questionBank = [
         category: "Buyer Marketing & List Building",
         difficulty: "medium",
         explanation: "Professional buyers understand wholesaling fees when they see the value. Explain your marketing investment, deal finding expertise, and the off-market opportunity you've provided. If the deal numbers work for them, a fair fee isn't an issue.",
-        sourceChapter: "Step Five: Marketing Plan for Investors"
+        sourceChapter: "Topic: Buyer Disposition Strategies"
     },
     {
         id: 50,
@@ -850,7 +850,168 @@ const questionBank = [
         category: "Networking & REIA",
         difficulty: "medium",
         explanation: "Wholesaling rewards persistence and consistency. You'll face constant rejection, low acceptance rates, and deals falling through. Success comes from making hundreds of offers, continuous marketing, relationship building, and refusing to quit when things get difficult.",
-        sourceChapter: "Introduction & Bonus Steps"
+        sourceChapter: "Topic: Wholesaling Mindset & Ethics"
+    },
+    // ========== ADVANCED STRATEGIES & LEGAL ==========
+    {
+        id: 51,
+        question: "What is the primary legal difference between an 'Assignment of Contract' and a 'Double Closing'?",
+        options: [
+            "Assignments transfer your rights to the buyer, while Double Closings involve two separate transactions where you take title briefly",
+            "Assignments are illegal in most states, while Double Closings are preferred",
+            "Double Closings require less paperwork than Assignments",
+            "There is no legal difference; they are just different terms for the same process"
+        ],
+        correctAnswers: [0],
+        type: "single",
+        category: "Advanced Strategies & Legal",
+        difficulty: "hard",
+        explanation: "In an Assignment, you sell the paper (contract rights) for a fee. In a Double Closing (A-B, B-C), you actually purchase the property from the seller and immediately resell it to the end buyer, keeping the price difference. This offers more privacy but higher closing costs.",
+        sourceChapter: "Topic: Advanced Closing Structures"
+    },
+    {
+        id: 52,
+        question: "Why might a wholesaler choose to use 'Transactional Funding' for a deal?",
+        options: [
+            "To pay for marketing expenses",
+            "To fund the A-B leg of a double closing when they don't have their own cash",
+            "To pay the seller a deposit before signing the contract",
+            "To finance the rehab costs for the end buyer"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Advanced Strategies & Legal",
+        difficulty: "medium",
+        explanation: "Transactional funding is short-term (often same-day) financing used specifically for double closings. It allows a wholesaler to buy the property from the seller using borrowed funds, which are repaid immediately when the end buyer closes.",
+        sourceChapter: "Topic: Creative Financing"
+    },
+    {
+        id: 53,
+        question: "What is a 'Subject-To' transaction in real estate wholesaling?",
+        options: [
+            "Buying a property subject to an inspection",
+            "Taking over the seller's existing mortgage payments while receiving the deed",
+            "Making an offer subject to your partner's approval",
+            "Buying a property only if it appraises for a certain value"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Advanced Strategies & Legal",
+        difficulty: "hard",
+        explanation: "Subject-To involves acquiring the property deed while leaving the existing mortgage in the seller's name. The investor takes over the payments. This is a powerful strategy for properties with little equity or low interest rates.",
+        sourceChapter: "Topic: Creative Financing"
+    },
+    {
+        id: 54,
+        question: "When dealing with 'Probate' leads, who is typically the decision-maker you need to contact?",
+        options: [
+            "The deceased owner",
+            "The Personal Representative or Executor of the estate",
+            "The probate judge",
+            "The neighbors"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Seller Lead Generation",
+        difficulty: "medium",
+        explanation: "In probate situations, the Personal Representative (or Executor) is the person legally authorized to manage and sell the estate's assets. Building rapport with them is key to securing these often-lucrative deals.",
+        sourceChapter: "Topic: Niche Lead Generation"
+    },
+    {
+        id: 55,
+        question: "What is the purpose of filing a 'Memorandum of Contract' or 'Affidavit of Interest'?",
+        options: [
+            "To sue the seller for damages",
+            "To cloud the title and prevent the seller from selling to someone else behind your back",
+            "To officially record the deed transfer",
+            "To apply for a mortgage"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Advanced Strategies & Legal",
+        difficulty: "hard",
+        explanation: "A Memorandum of Contract is recorded in public records to notify third parties that you have a valid contract on the property. It protects your interest and prevents the seller from bypassing you to sell to another buyer.",
+        sourceChapter: "Topic: Deal Protection & Ethics"
+    },
+    {
+        id: 56,
+        question: "Which of the following are common 'Red Flags' when analyzing a potential wholesale deal?",
+        options: [
+            "Seller refuses to allow access for inspection",
+            "Title search reveals multiple unknown liens exceeding the purchase price",
+            "Property is in a war zone with no recent comps",
+            "Seller wants a large non-refundable deposit released immediately"
+        ],
+        correctAnswers: [0, 1, 2, 3],
+        type: "multiple",
+        category: "Deal Analysis & Negotiation",
+        difficulty: "medium",
+        explanation: "All listed items are major red flags. Lack of access hides condition issues. Liens can kill the deal's equity. No comps means no verifiable value. Releasing deposits early is a common scam or high-risk move.",
+        sourceChapter: "Topic: Risk Management"
+    },
+    {
+        id: 57,
+        question: "What is 'Wholetailing'?",
+        options: [
+            "Wholesaling retail properties",
+            "Buying a property, doing minor cleanup/repairs, and listing it on the MLS for retail buyers",
+            "Selling a wholesale deal to another wholesaler",
+            "Wholesaling only tail-end properties"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Advanced Strategies & Legal",
+        difficulty: "medium",
+        explanation: "Wholetailing is a hybrid strategy. You close on the property (buy it), do minimal work (trash out, clean), and then list it on the open market (MLS) to attract retail buyers or investors paying higher prices than typical cash buyers.",
+        sourceChapter: "Topic: Exit Strategies"
+    },
+    {
+        id: 58,
+        question: "Why is 'Earning Money Deposit' (EMD) important in a wholesale contract?",
+        options: [
+            "It is the wholesaler's profit",
+            "It shows the seller you are a serious buyer and provides consideration for the contract",
+            "It pays the realtor's commission",
+            "It is not important and should always be $1"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Making Offers & Negotiations",
+        difficulty: "easy",
+        explanation: "EMD demonstrates 'skin in the game' and makes your offer legally binding (consideration). While wholesalers try to keep it low ($100-$500), a reasonable EMD builds trust with sellers.",
+        sourceChapter: "Topic: Contract Fundamentals"
+    },
+    {
+        id: 59,
+        question: "What does 'Novation' mean in the context of real estate?",
+        options: [
+            "Renovating a property",
+            "Replacing an old contract with a new one, often to change terms or parties",
+            "Notarizing a document",
+            "Negotiating a lower price"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Advanced Strategies & Legal",
+        difficulty: "hard",
+        explanation: "Novation is the act of substituting a new contract for an old one. In wholesaling, a 'Novation Agreement' can be used to allow a wholesaler to sell the property on the MLS on behalf of the seller, often netting a higher profit than a standard assignment.",
+        sourceChapter: "Topic: Advanced Contract Law"
+    },
+    {
+        id: 60,
+        question: "You find a property with a 'Tax Lien'. What does this mean for the transaction?",
+        options: [
+            "The property cannot be sold",
+            "The lien must be paid off (satisfied) at or before closing for the title to be clear",
+            "The buyer automatically assumes the debt",
+            "The government now owns the property"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Closing & Escrow Coordination",
+        difficulty: "medium",
+        explanation: "Tax liens are debts attached to the property. They don't prevent a sale, but they must be paid from the seller's proceeds (or by the buyer) to transfer clear title. This reduces the seller's net cash, which must be accounted for in your offer.",
+        sourceChapter: "Topic: Title & Lien Resolution"
     }
 ];
 

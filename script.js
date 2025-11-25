@@ -667,52 +667,52 @@ function generateRecommendations(categoryResults) {
         'Market Analysis': {
             title: 'Market Analysis & Gridding',
             content: 'Spend time physically driving target neighborhoods. Use City Data, Zillow, and Rentometer to verify investor activity. Build a systematic approach to identifying high-demand areas before investing marketing dollars.',
-            chapter: 'Step One: Analyze Your Market'
+            chapter: 'Topic: Market Analysis Fundamentals'
         },
         'Realtor Relationships': {
             title: 'Building Realtor Partnerships',
             content: 'Focus on mid-tier agents hungry for volume business. Demonstrate reliability by consistently closing deals. Show Realtors how your investor buyers need their services for rehab work and future deals.',
-            chapter: 'Step Two: Meet with Realtors'
+            chapter: 'Topic: Realtor Partnership Strategies'
         },
         'Contractor Partnerships': {
             title: 'Understanding Rehab Costs',
             content: 'Create a local pricing checklist for common repairs (roof, HVAC, foundation, kitchens, baths). Build relationships with multiple contractors to verify estimates and avoid inflated repair cost assumptions.',
-            chapter: 'Step Three: Meet with General Contractors'
+            chapter: 'Topic: Rehab Estimation & Contractor Relations'
         },
         'Seller Lead Generation': {
             title: 'Marketing to Motivated Sellers',
             content: 'Diversify your marketing channels: direct mail, online ads, bandit signs, guerrilla networking. Use vanity phone numbers for memorability. Target specific pain points (foreclosure, divorce, job loss) with empathetic messaging.',
-            chapter: 'Step Four: Marketing Plan for Lead Generation'
+            chapter: 'Topic: Seller Acquisition Systems'
         },
         'Buyer Marketing & List Building': {
             title: 'Building Your Buyers List',
             content: 'Interview buyers to understand their investment criteria deeply. Attend REIA meetings consistently. Provide value through education and market insights, not just deal flow. Build reciprocal referral relationships.',
-            chapter: 'Step Five: Marketing Plan for Investors'
+            chapter: 'Topic: Buyer Disposition Strategies'
         },
         'Lead Management & Automation': {
             title: 'Systems & Lead Management',
             content: 'Implement a CRM with automated follow-up sequences. Ensure mobile access for field work. Track conversion rates at each pipeline stage. Use technology to scale without losing quality of engagement.',
-            chapter: 'Step Six: Develop a Lead Management System'
+            chapter: 'Topic: Lead Management & CRM'
         },
         'Networking & REIA': {
             title: 'Networking & Community Building',
             content: 'Join your local REIA and attend consistently. Build genuine relationships with investors, lenders, and service providers. If no REIA exists, consider starting one to position yourself as a community hub.',
-            chapter: 'Step Seven: Join Your Local REIA'
+            chapter: 'Topic: Networking & Community Building'
         },
         'Making Offers & Negotiations': {
             title: 'Offer Strategy & Volume',
             content: 'Make hundreds of offers targeting 50% of ARV. Accept low acceptance rates (less than 5%). Use inspection contingencies to minimize risk. Don\'t fear rejection or offending sellers with low offers - discipline wins long-term.',
-            chapter: 'Step Eight: Prepare to Make Offers'
+            chapter: 'Topic: Deal Analysis & Negotiation'
         },
         'Property Marketing to Buyers': {
             title: 'Marketing Accepted Contracts',
             content: 'Immediately market properties upon contract acceptance. Maintain detailed buyer profiles to match deals quickly. Have backup buyers ready. Provide clear ARV, repair estimates, and profit potential upfront.',
-            chapter: 'Step Nine: Market Your Property to Buyers'
+            chapter: 'Topic: Disposition & Marketing'
         },
         'Closing & Escrow Coordination': {
             title: 'Closing Process Management',
             content: 'Build relationships with multiple title companies experienced in investor transactions. Test their service, speed, and fees. Choose partners who understand wholesale assignments and can handle high volume efficiently.',
-            chapter: 'Step Ten: Set Up Appointment with Closing Attorney or Title Agent'
+            chapter: 'Topic: Transaction Coordination & Closing'
         }
     };
     
