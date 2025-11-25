@@ -71,7 +71,7 @@ This guide helps you create the Google Form where customers will upload their pa
 
 ### Presentation Tab:
 - ✓ Show progress bar
-- Confirmation message: **"Order received! We'll analyze your quiz results and email your comprehensive performance analysis within 24 hours. Check your spam folder if you don't see it."**
+- Confirmation message: **"Order received! We'll verify your payment and analyze your quiz results, then email your comprehensive performance analysis within 24 hours. Check your spam folder if you don't see it."**
 
 ---
 
