@@ -1522,11 +1522,6 @@ body {
     padding: 14px 32px;
 }
 
-.mini-unlock-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
-}
-
 /* Modal */
 .modal {
     display: none;
@@ -2035,4 +2030,131 @@ body {
         max-height: 90vh;
         overflow-y: auto;
     }
+}
+
+/* ============================================
+   NEW UTILITY CLASSES (Refactored from Inline Styles)
+   ============================================ */
+
+.trust-label {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-tertiary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.trust-logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    opacity: 0.6;
+}
+
+.trust-logo-text {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+.quiz-info-desc {
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* Premium Section Refinements */
+.premium-title {
+    color: var(--brand-primary);
+}
+
+.column-title {
+    color: var(--brand-primary);
+}
+
+.column-item {
+    color: var(--text-secondary);
+}
+
+.column-item-highlight {
+    color: var(--text-primary);
+}
+
+.payment-icons {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    opacity: 0.7;
+}
+
+.payment-icons i {
+    font-size: 24px;
+}
+
+.payment-icons span {
+    font-size: 0.85rem;
+}
+
+/* ============================================
+   ACCESSIBILITY ENHANCEMENTS
+   ============================================ */
+
+/* Visible focus states for keyboard navigation */
+:focus-visible {
+    outline: 2px solid var(--brand-primary);
+    outline-offset: 2px;
+}
+
+/* Skip to main content link (hidden by default, visible on focus) */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--brand-primary);
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Ensure sufficient contrast for text on colored backgrounds */
+.primary-btn, .premium-btn, .category-badge, .difficulty-badge {
+    color: #ffffff; /* Force white text on dark buttons */
+}
+
+/* Font Loading Performance */
+@font-face {
+    font-family: 'Remix Icon';
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.woff2') format('woff2');
+}
+
+/* FAQ Section */
+.faq-section {
+    margin-top: 40px;
+}
+
+.faq-content {
+    text-align: left;
+    color: var(--text-secondary);
+}
+
+/* Success Button Variant */
+.btn-success {
+    background: #10b981 !important; /* Override primary-btn background */
+    border-color: #10b981;
+}
+
+.btn-success:hover {
+    background: #059669 !important;
 }

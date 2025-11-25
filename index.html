@@ -3,10 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Test your wholesale real estate knowledge with this comprehensive competency assessment. Evaluate your skills in market analysis, deal structuring, and business scaling.">
+    <meta name="keywords" content="wholesale real estate, real estate quiz, wholesaling assessment, real estate investing, property flipping">
+    <meta name="author" content="Wholesale Real Estate Mastery">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta property="og:title" content="Wholesale Real Estate Mastery Quiz">
+    <meta property="og:description" content="Test your wholesaling knowledge & strategic thinking with our industry-standard assessment.">
+    <meta property="og:image" content="https://yourwebsite.com/assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourwebsite.com/">
+    <meta property="twitter:title" content="Wholesale Real Estate Mastery Quiz">
+    <meta property="twitter:description" content="Test your wholesaling knowledge & strategic thinking with our industry-standard assessment.">
+    <meta property="twitter:image" content="https://yourwebsite.com/assets/og-image.jpg">
+
     <title>Wholesale Real Estate Mastery Quiz</title>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=1.1">
-    <script src="config.js?v=1.1"></script>
+    <link rel="stylesheet" href="style.css?v=1.2">
+    <script src="config.js?v=1.1" defer></script>
 </head>
 <body>
     <!-- Theme Toggle -->
@@ -17,6 +40,7 @@
     </div>
 
     <!-- Home Page -->
+    <main>
     <section id="homePage" class="page active">
         <div class="container">
             <div class="header-section">
@@ -25,15 +49,15 @@
             </div>
 
             <!-- Trust Indicators -->
-            <div style="text-align: center; margin-bottom: 40px; color: var(--text-tertiary); font-size: 0.9rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">
+            <div class="trust-label">
                 Curriculum Aligned With Methodologies From
             </div>
-            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 50px; opacity: 0.6;">
+            <div class="trust-logos">
                 <!-- Simple Text Logos look cleaner than mismatched images -->
-                <span style="font-weight: 700; font-size: 1.2rem; color: var(--text-secondary);">The Wholesaler's Bible</span>
-                <span style="font-weight: 700; font-size: 1.2rem; color: var(--text-secondary);">BiggerPockets</span>
-                <span style="font-weight: 700; font-size: 1.2rem; color: var(--text-secondary);">REIA National</span>
-                <span style="font-weight: 700; font-size: 1.2rem; color: var(--text-secondary);">Keller Williams</span>
+                <span class="trust-logo-text">The Wholesaler's Bible</span>
+                <span class="trust-logo-text">BiggerPockets</span>
+                <span class="trust-logo-text">REIA National</span>
+                <span class="trust-logo-text">Keller Williams</span>
             </div>
 
             <div class="welcome-card">
@@ -80,7 +104,7 @@
 
                 <div class="quiz-info">
                     <h3><i class="ri-book-open-line"></i> Based on Industry-Leading Resources</h3>
-                    <p style="margin-bottom: 20px; color: var(--text-secondary); font-size: 1rem;">Questions derived from the most trusted wholesaling books and expert recommendations:</p>
+                    <p class="quiz-info-desc">Questions derived from the most trusted wholesaling books and expert recommendations:</p>
                     <ul class="info-list">
                         <li><i class="ri-star-fill"></i> <strong>Million Dollar Wholesaler</strong> by James Hodges — Comprehensive wholesaling mastery</li>
                         <li><i class="ri-star-fill"></i> <strong>How to Wholesale Real Estate</strong> by Shawn D. Jackson — Practical step-by-step strategies</li>
@@ -326,49 +350,49 @@
 
             <!-- Premium Study Plan Offer -->
             <!-- Updated Premium Section -->
-            <div class="results-section premium-offer-section" id="premiumOfferSection" style="background: white; border: 2px solid var(--brand-primary); color: var(--text-primary);">
+            <div class="results-section premium-offer-section" id="premiumOfferSection">
                 <div class="premium-offer-card">
-                    <div class="premium-badge" style="background: var(--brand-primary); color: white;">PROFESSIONAL REPORT</div>
+                    <div class="premium-badge">PROFESSIONAL REPORT</div>
                     
-                    <h2 style="color: var(--brand-primary);">Download Your Career Roadmap</h2>
-                    <p class="premium-description" style="color: var(--text-secondary);">
+                    <h2 class="premium-title">Download Your Career Roadmap</h2>
+                    <p class="premium-description">
                         Get a 20+ page PDF analysis comparing your current knowledge against industry standards. Includes a 30-day corrective action plan based on your weak points.
                     </p>
                     
                     <div class="feature-comparison">
                         <!-- Keep existing comparison columns but ensure text colors are fixed -->
-                        <div class="comparison-column free-column" style="color: var(--text-primary); border-color: #e2e8f0; background: #f8fafc;">
-                            <h3 style="color: var(--brand-primary)">Standard Results</h3>
+                        <div class="comparison-column free-column">
+                            <h3 class="column-title">Standard Results</h3>
                             <ul>
-                                <li style="color: var(--text-secondary)">Online Score Display</li>
-                                <li style="color: var(--text-secondary)">Basic Category Breakdown</li>
-                                <li style="color: var(--text-secondary)">Web-based Recommendations</li>
+                                <li class="column-item">Online Score Display</li>
+                                <li class="column-item">Basic Category Breakdown</li>
+                                <li class="column-item">Web-based Recommendations</li>
                             </ul>
                         </div>
-                        <div class="comparison-column premium-column" style="background: #eff6ff; border-color: var(--brand-secondary);">
-                            <h3 style="color: var(--brand-primary)">Professional Audit ($14.99)</h3>
+                        <div class="comparison-column premium-column">
+                            <h3 class="column-title">Professional Audit ($14.99)</h3>
                             <ul>
-                                <li style="color: var(--text-primary)"><strong>PDF Download (Keep Forever)</strong></li>
-                                <li style="color: var(--text-primary)">Cognitive Bias Analysis</li>
-                                <li style="color: var(--text-primary)">Decision Framework Audit</li>
-                                <li style="color: var(--text-primary)">30-Day Syllabus (Book & Chapter Mapping)</li>
+                                <li class="column-item-highlight"><strong>PDF Download (Keep Forever)</strong></li>
+                                <li class="column-item-highlight">Cognitive Bias Analysis</li>
+                                <li class="column-item-highlight">Decision Framework Audit</li>
+                                <li class="column-item-highlight">30-Day Syllabus (Book & Chapter Mapping)</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="premium-guarantee" style="background: #f0fdf4; border-color: #bbf7d0; color: #166534;">
+                    <div class="premium-guarantee">
                         <p><i class="ri-shield-check-line"></i> <strong>100% Satisfaction Guarantee:</strong> If the study plan doesn't help you clarify your next steps, we'll refund your $14.99 immediately.</p>
                     </div>
 
                     <div class="premium-cta">
-                        <button id="unlockPremiumBtn" class="premium-btn" style="background: var(--brand-primary); color: white; box-shadow: none;">
+                        <button id="unlockPremiumBtn" class="premium-btn">
                             Get My Professional Analysis
                         </button>
-                        <div style="margin-top: 15px; display: flex; align-items: center; justify-content: center; gap: 15px; opacity: 0.7;">
-                            <i class="ri-paypal-fill" style="font-size: 24px; color: #003087;"></i>
-                            <i class="ri-visa-fill" style="font-size: 24px; color: #1a1f71;"></i>
-                            <i class="ri-mastercard-fill" style="font-size: 24px; color: #eb001b;"></i>
-                            <span style="font-size: 0.85rem;">SSL Secure Checkout</span>
+                        <div class="payment-icons">
+                            <i class="ri-paypal-fill" style="color: #003087;"></i>
+                            <i class="ri-visa-fill" style="color: #1a1f71;"></i>
+                            <i class="ri-mastercard-fill" style="color: #eb001b;"></i>
+                            <span>SSL Secure Checkout</span>
                         </div>
                     </div>
                 </div>
@@ -388,7 +412,7 @@
                             <div class="step-content">
                                 <h3><i class="ri-money-dollar-circle-line"></i> Complete PayPal Payment</h3>
                                 <p>Pay $14.99 securely through PayPal and take a screenshot of the confirmation</p>
-                                <a id="paypalLink" href="#" target="_blank" class="step-btn paypal-btn">
+                                <a id="paypalLink" href="#" target="_blank" rel="noopener noreferrer" class="step-btn paypal-btn">
                                     Pay with PayPal →
                                 </a>
                                 <p class="step-hint">✓ Save the payment confirmation screenshot for Step 2</p>
@@ -416,7 +440,7 @@
                             <div class="step-content">
                                 <h3><i class="ri-upload-cloud-2-line"></i> Submit Order Form</h3>
                                 <p>Upload payment screenshot + quiz results file</p>
-                                <a id="googleFormLink" href="#" target="_blank" class="step-btn google-form-btn">
+                                <a id="googleFormLink" href="#" target="_blank" rel="noopener noreferrer" class="step-btn google-form-btn">
                                     Open Order Form →
                                 </a>
                                 <p class="step-hint">✓ We'll verify payment and email your analysis within 24 hours</p>
@@ -432,23 +456,20 @@
             </div>
 
             <!-- FAQ Section -->
-            <div class="results-section" style="margin-top: 40px;">
+            <div class="results-section faq-section">
                 <h2>Frequently Asked Questions</h2>
-                <div style="text-align: left; color: var(--text-secondary);">
+                <div class="faq-content">
                     <p><strong>Is this a course?</strong><br>
                     No. This is a competency assessment tool designed to identify gaps in your knowledge before you risk capital in the market.</p>
                     <br>
                     <p><strong>How do I receive my report?</strong><br>
                     After checkout, you will upload your result file to our secure portal. A PDF analysis will be generated and emailed to you within 24 hours.</p>
-                    <br>
-                    <p><strong>Is there a refund policy?</strong><br>
-                    Yes. If you are not satisfied with the depth of the analysis, reply to your results email within 7 days for a full refund.</p>
                 </div>
             </div>
 
             <!-- Actions -->
             <div class="results-actions">
-                <button onclick="downloadQuizResults()" class="primary-btn" style="background: #10b981;">
+                <button onclick="downloadQuizResults()" class="primary-btn btn-success">
                     <i class="ri-download-line"></i> Download My Results
                 </button>
                 <button id="retakeBtn" class="secondary-btn">↻ Retake Assessment</button>
@@ -457,8 +478,9 @@
         </div>
     </section>
 
-    <script src="questions.js?v=1.1"></script>
-    <script src="premium-study-plan.js?v=1.1"></script>
-    <script src="script.js?v=1.1"></script>
+    <script src="questions.js?v=1.1" defer></script>
+    <script src="premium-study-plan.js?v=1.1" defer></script>
+    <script src="script.js?v=1.1" defer></script>
+    </main>
 </body>
 </html>
