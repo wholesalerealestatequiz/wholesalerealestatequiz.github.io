@@ -3,20 +3,21 @@
    Professional, Modern, Responsive Design
    ============================================ */
 
-/* Root Variables - Professional Design System */
+/* Root Variables - Enterprise Design System */
 :root {
-    /* Light Theme Colors - Clean Professional */
-    --bg-primary: rgba(249, 250, 251, 0.95);
-    --bg-secondary: rgba(255, 255, 255, 0.95);
-    --bg-tertiary: rgba(243, 244, 246, 0.9);
-    --text-primary: #111827;
-    --text-secondary: #4b5563;
-    --text-tertiary: #9ca3af;
+    /* Theme Colors - Trust & Authority Palette */
+    --bg-primary: #f8fafc; /* Slate 50 - Very light grey, not stark white */
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #f1f5f9;
     
-    /* Brand Colors - Professional Trust Palette */
-    --brand-primary: #1e40af;
-    --brand-secondary: #3b82f6;
-    --brand-accent: #0891b2;
+    --text-primary: #0f172a; /* Slate 900 - Almost black navy */
+    --text-secondary: #475569; /* Slate 600 */
+    --text-tertiary: #94a3b8;
+    
+    /* Brand Colors - The "Financial Trust" Blue */
+    --brand-primary: #0f172a; /* Deep Navy */
+    --brand-secondary: #3b82f6; /* Action Blue */
+    --brand-accent: #0ea5e9; /* Sky Blue */
     
     /* Semantic Colors */
     --success: #10b981;
@@ -24,30 +25,18 @@
     --danger: #ef4444;
     --info: #06b6d4;
     
-    /* Category Colors */
-    --cat-market: #8b5cf6;
-    --cat-realtor: #ec4899;
-    --cat-contractor: #f97316;
-    --cat-seller-lead: #14b8a6;
-    --cat-buyer-marketing: #6366f1;
-    --cat-lead-mgmt: #0ea5e9;
-    --cat-networking: #10b981;
-    --cat-offers: #f59e0b;
-    --cat-property-marketing: #ef4444;
-    --cat-closing: #8b5cf6;
-    
     /* UI Elements */
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     
-    --radius-sm: 6px;
-    --radius-md: 10px;
-    --radius-lg: 16px;
-    --radius-xl: 24px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
     
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: all 0.2s ease-in-out;
 }
 
 /* Dark Theme - Professional Dark Mode */
@@ -87,19 +76,9 @@ body {
     position: relative;
 }
 
+/* Remove the background image overlay - Plain is more professional */
 body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('Images/vecteezy_background-made-of-houses-a-vector-illustration_20882289.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.30;
-    z-index: -1;
-    pointer-events: none;
+    display: none; 
 }
 
 /* Theme Toggle */
@@ -168,37 +147,39 @@ body::before {
     }
 }
 
-/* Header Section */
+/* Update Header Styling to look like a SaaS app */
 .header-section {
     text-align: center;
     margin-bottom: 40px;
-    background: var(--bg-secondary);
-    padding: 30px 20px;
-    border-radius: var(--radius-lg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: var(--shadow-md);
+    background: transparent; /* Remove box */
+    padding: 60px 20px 20px 20px;
+    box-shadow: none;
+    border: none;
 }
 
 .header-section h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: var(--text-primary);
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: var(--brand-primary);
     letter-spacing: -0.025em;
+    line-height: 1.1;
 }
 
 .subtitle {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-/* Welcome Card */
+/* Make cards look cleaner */
 .welcome-card {
     background: var(--bg-secondary);
+    border: 1px solid #e2e8f0; /* Subtle border */
+    box-shadow: var(--shadow-sm); /* Smaller shadow */
     border-radius: var(--radius-lg);
     padding: 40px;
-    box-shadow: var(--shadow-md);
     margin-bottom: 30px;
     position: relative;
     overflow: hidden;
@@ -411,15 +392,19 @@ body::before {
     gap: 8px;
 }
 
+/* Professional Buttons */
 .primary-btn {
-    background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+    background: var(--brand-primary); /* Dark Navy */
+    font-weight: 500;
+    letter-spacing: 0.5px;
     color: white;
     box-shadow: var(--shadow-md);
 }
 
 .primary-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    background: #1e293b; /* Slightly lighter navy */
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
 }
 
 .secondary-btn {
@@ -707,7 +692,7 @@ body::before {
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--brand-primary), var(--brand-secondary));
+    background: var(--brand-primary);
     transition: width 0.5s ease;
     border-radius: 5px;
 }
@@ -715,9 +700,10 @@ body::before {
 /* Question Card */
 .question-card {
     background: var(--bg-secondary);
+    border: 1px solid #e2e8f0; /* Subtle border */
+    box-shadow: var(--shadow-sm); /* Smaller shadow */
     border-radius: var(--radius-lg);
     padding: 40px;
-    box-shadow: var(--shadow-md);
     margin-bottom: 30px;
     animation: fadeIn 0.4s ease-in-out;
 }
@@ -800,10 +786,11 @@ body::before {
     transform: translateX(5px);
 }
 
+/* Update Option Selection */
 .option.selected {
-    background: var(--brand-primary);
-    color: white;
-    border-color: var(--brand-accent);
+    background: #eff6ff; /* Very light blue */
+    border-color: var(--brand-secondary);
+    color: var(--brand-primary);
 }
 
 .option-letter {
@@ -821,8 +808,8 @@ body::before {
 }
 
 .option.selected .option-letter {
-    background: white;
-    color: var(--brand-primary);
+    background: var(--brand-secondary);
+    color: white;
 }
 
 .multi-select-hint {
@@ -938,10 +925,11 @@ body::before {
 /* Results Section */
 .results-section {
     background: var(--bg-secondary);
+    border: 1px solid #e2e8f0; /* Subtle border */
+    box-shadow: var(--shadow-sm); /* Smaller shadow */
     border-radius: var(--radius-lg);
     padding: 35px;
     margin-bottom: 30px;
-    box-shadow: var(--shadow-sm);
 }
 
 .results-section h2 {
