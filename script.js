@@ -764,7 +764,7 @@ function generateRecommendations(categoryResults) {
     if (weakCategories.length === 0) {
         recommendations.push(`
             <div class="recommendation-item">
-                <h4>🎯 Continue Your Excellence</h4>
+                <h4><i class="ri-award-line"></i> Continue Your Excellence</h4>
                 <p>You're performing well across all categories! To further enhance your wholesaling success:</p>
                 <ul>
                     <li>Implement systems from your knowledge</li>
@@ -1150,7 +1150,7 @@ window.downloadAndMarkComplete = function() {
         
         if (step1Card) step1Card.classList.add('completed');
         if (step1Status) {
-            step1Status.textContent = '✓ Done';
+            step1Status.innerHTML = '<i class="ri-check-line"></i> Done';
             step1Status.classList.add('done');
         }
         if (downloadBtn) {
@@ -1179,7 +1179,7 @@ window.markPaypalClicked = function() {
         
         if (step2Card) step2Card.classList.add('completed');
         if (step2Status) {
-            step2Status.textContent = '✓ Done';
+            step2Status.innerHTML = '<i class="ri-check-line"></i> Done';
             step2Status.classList.add('done');
         }
         if (step3Card) step3Card.classList.add('active');
