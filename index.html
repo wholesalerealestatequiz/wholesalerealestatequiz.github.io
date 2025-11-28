@@ -522,15 +522,15 @@
                 <div class="footer-section">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="#homePage" onclick="showPage('homePage')">Take the Quiz</a></li>
-                        <li><a href="#" onclick="document.getElementById('premiumOrderModal').style.display='block'">Get Premium Analysis</a></li>
+                        <li><a href="#" onclick="showPage('homePage'); return false;">Take the Quiz</a></li>
+                        <li><a href="#" onclick="showPage('resultsPage'); setTimeout(function(){ document.getElementById('premiumOfferSection').scrollIntoView({behavior:'smooth'}); }, 100); return false;">Get Premium Analysis</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Support</h4>
                     <ul>
                         <li><a href="mailto:wholesalerealestatequiz@gmail.com">Contact Us</a></li>
-                        <li><a href="#" class="faq-link">FAQ</a></li>
+                        <li><a href="#" onclick="showPage('resultsPage'); setTimeout(function(){ document.querySelector('.faq-section').scrollIntoView({behavior:'smooth'}); }, 100); return false;">FAQ</a></li>
                     </ul>
                 </div>
             </div>
