@@ -29,9 +29,51 @@
     
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=1.2">
+    <link rel="stylesheet" href="header-styles.css">
     <script src="config.js?v=1.1" defer></script>
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <header class="main-header">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-cube">
+                    <span>2</span>
+                    <span>3</span>
+                    <span>1</span>
+                </div>
+                <span class="logo-text">test</span>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="nav-link active">Tests <span class="nav-badge">45</span> <i class="ri-arrow-down-s-line"></i></a></li>
+                    <li><a href="#" class="nav-link">Articles <i class="ri-arrow-down-s-line"></i></a></li>
+                    <li><a href="#" class="nav-link">List of professions</a></li>
+                    <li><a href="#" class="nav-link">Help <i class="ri-arrow-down-s-line"></i></a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="user-menu">
+                    <i class="ri-user-line"></i> <i class="ri-arrow-down-s-line"></i>
+                </div>
+                <a href="#" class="nav-link business-link">Business</a>
+                <a href="#" class="nav-link lang-link">EN <i class="ri-arrow-down-s-line"></i></a>
+                <div class="search-menu">
+                    <i class="ri-search-line"></i> <i class="ri-arrow-down-s-line"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Banner -->
+    <div class="stats-banner">
+        <div class="container banner-container">
+            <p><i class="ri-global-line"></i> <span>1,035,218 tests completed in the last 30 days</span></p>
+        </div>
+    </div>
+
     <!-- Theme Toggle -->
     <div class="theme-toggle-container">
         <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
