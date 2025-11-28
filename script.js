@@ -981,7 +981,7 @@ window.downloadQuizResults = function() {
     // Check if quiz data exists
     if (!state.currentQuestions || state.currentQuestions.length === 0) {
         alert('Please complete the quiz first before downloading results!');
-        return;
+        return false;
     }
     
     console.log('Starting file generation...');
@@ -1133,15 +1133,57 @@ window.downloadQuizResults = function() {
     URL.revokeObjectURL(url);
     console.log('Download triggered successfully!');
     
-    // Update the status message
-    const statusElement = document.getElementById('downloadStatus');
-    if (statusElement) {
-        statusElement.innerHTML = '<i class="fas fa-check-circle"></i> Downloaded! Upload this file in Step 3';
-        statusElement.style.color = '#10b981';
-    }
-    
     // Mark that results have been downloaded (prevents beforeunload warning)
     state.hasDownloadedResults = true;
+    
+    return true;
+};
+
+// Enhanced download function that marks step complete
+window.downloadAndMarkComplete = function() {
+    const success = window.downloadQuizResults();
+    if (success) {
+        // Mark step 1 as complete
+        const step1Card = document.getElementById('step1Card');
+        const step1Status = document.getElementById('step1Status');
+        const downloadBtn = document.getElementById('downloadBtn');
+        
+        if (step1Card) step1Card.classList.add('completed');
+        if (step1Status) {
+            step1Status.textContent = '✓ Done';
+            step1Status.classList.add('done');
+        }
+        if (downloadBtn) {
+            downloadBtn.innerHTML = '<i class="ri-check-line"></i> Downloaded!';
+            downloadBtn.classList.add('done');
+        }
+        
+        // Activate step 2
+        const step2Card = document.getElementById('step2Card');
+        if (step2Card) step2Card.classList.add('active');
+    }
+};
+
+// Track PayPal click
+window.markPaypalClicked = function() {
+    // Mark step 2 as in progress
+    const step2Status = document.getElementById('step2Status');
+    if (step2Status) {
+        step2Status.textContent = '🔄 In Progress';
+    }
+    
+    // After a delay, assume they completed payment
+    setTimeout(() => {
+        const step2Card = document.getElementById('step2Card');
+        const step3Card = document.getElementById('step3Card');
+        
+        if (step2Card) step2Card.classList.add('completed');
+        if (step2Status) {
+            step2Status.textContent = '✓ Done';
+            step2Status.classList.add('done');
+        }
+        if (step3Card) step3Card.classList.add('active');
+    }, 3000);
 };
 
 function generateAndDownloadStudyPlan() {

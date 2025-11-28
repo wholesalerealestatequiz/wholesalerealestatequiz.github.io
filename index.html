@@ -426,55 +426,71 @@
             <div id="premiumOrderModal" class="modal" style="display: none;">
                 <div class="modal-content premium-order-content">
                     <span class="close-modal" id="closePremiumModal" onclick="document.getElementById('premiumOrderModal').style.display='none'">&times;</span>
-                    <div class="modal-icon">📋</div>
-                    <h2>Complete Your Order</h2>
-                    <p class="modal-description">Follow these 2 simple steps to receive your personalized study plan:</p>
                     
-                    <div class="order-steps">
-                        <div class="order-step">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <h3><i class="ri-money-dollar-circle-line"></i> Complete PayPal Payment</h3>
-                                <p>Pay $14.99 securely through PayPal and take a screenshot of the confirmation</p>
-                                <a id="paypalLink" href="#" target="_blank" rel="noopener noreferrer" class="step-btn paypal-btn">
-                                    Pay with PayPal →
-                                </a>
-                                <p class="step-hint">✓ Save the payment confirmation screenshot for Step 2</p>
+                    <div class="modal-header-section">
+                        <div class="modal-icon">🎯</div>
+                        <h2>Get Your Professional Analysis</h2>
+                        <p class="modal-price">$14.99 <span class="price-note">• Delivered within 24 hours</span></p>
+                    </div>
+                    
+                    <div class="order-flow">
+                        <!-- Step 1: Download First -->
+                        <div class="order-step-card" id="step1Card">
+                            <div class="step-header">
+                                <span class="step-badge">Step 1</span>
+                                <span class="step-status" id="step1Status">⏳ Pending</span>
+                            </div>
+                            <h3><i class="ri-file-download-line"></i> Download Your Results</h3>
+                            <p>First, save your quiz results - you'll need this file for your order.</p>
+                            <button onclick="downloadAndMarkComplete()" class="step-btn download-btn" id="downloadBtn">
+                                <i class="ri-download-line"></i> Download Results File
+                            </button>
+                        </div>
+
+                        <div class="step-arrow"><i class="ri-arrow-down-line"></i></div>
+
+                        <!-- Step 2: Pay with PayPal -->
+                        <div class="order-step-card" id="step2Card">
+                            <div class="step-header">
+                                <span class="step-badge">Step 2</span>
+                                <span class="step-status" id="step2Status">⏳ Waiting</span>
+                            </div>
+                            <h3><i class="ri-paypal-line"></i> Pay Securely with PayPal</h3>
+                            <p>Complete your payment. Include your <strong>email address</strong> in the PayPal note so we can send your analysis.</p>
+                            <a id="paypalLink" href="#" target="_blank" rel="noopener noreferrer" class="step-btn paypal-btn" onclick="markPaypalClicked()">
+                                <i class="ri-paypal-fill"></i> Pay $14.99 with PayPal
+                            </a>
+                            <div class="paypal-note">
+                                <i class="ri-information-line"></i> Add your email in PayPal's "Add a note" field
                             </div>
                         </div>
-                        
-                        <div class="step-divider">↓</div>
-                        
-                        <div class="order-step">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h3><i class="ri-download-line"></i> Download Your Quiz Results</h3>
-                                <p>Save your quiz data file - you'll upload this in the next step</p>
-                                <button onclick="downloadQuizResults()" class="step-btn download-btn">
-                                    <i class="ri-file-download-line"></i> Download Results File
-                                </button>
-                                <p class="step-hint" id="downloadStatus">Click to download your results as a .txt file</p>
+
+                        <div class="step-arrow"><i class="ri-arrow-down-line"></i></div>
+
+                        <!-- Step 3: Submit Form -->
+                        <div class="order-step-card" id="step3Card">
+                            <div class="step-header">
+                                <span class="step-badge">Step 3</span>
+                                <span class="step-status" id="step3Status">⏳ Waiting</span>
                             </div>
+                            <h3><i class="ri-send-plane-line"></i> Submit Your Order</h3>
+                            <p>Upload your results file and confirm your email. That's it!</p>
+                            <a id="googleFormLink" href="#" target="_blank" rel="noopener noreferrer" class="step-btn google-form-btn">
+                                <i class="ri-external-link-line"></i> Complete Order Form
+                            </a>
                         </div>
-                        
-                        <div class="step-divider">↓</div>
-                        
-                        <div class="order-step">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <h3><i class="ri-upload-cloud-2-line"></i> Submit Order Form</h3>
-                                <p>Upload payment screenshot + quiz results file</p>
-                                <a id="googleFormLink" href="#" target="_blank" rel="noopener noreferrer" class="step-btn google-form-btn">
-                                    Open Order Form →
-                                </a>
-                                <p class="step-hint">✓ We'll verify payment and email your analysis within 24 hours</p>
-                            </div>
+                    </div>
+
+                    <div class="modal-guarantee">
+                        <i class="ri-shield-check-line"></i>
+                        <div>
+                            <strong>100% Money-Back Guarantee</strong>
+                            <p>Not satisfied? Full refund within 7 days, no questions asked.</p>
                         </div>
                     </div>
                     
                     <div class="modal-footer">
-                        <p class="support-text">Questions? Email us at: <strong id="supportEmail">loading...</strong></p>
-                        <button onclick="document.getElementById('premiumOrderModal').style.display='none'" class="modal-close-btn">Close</button>
+                        <p class="support-text">Questions? <a href="mailto:wholesalerealestatequiz@gmail.com">wholesalerealestatequiz@gmail.com</a></p>
                     </div>
                 </div>
             </div>

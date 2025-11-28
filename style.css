@@ -2338,3 +2338,231 @@ body.dark-theme .premium-column {
         gap: 40px;
     }
 }
+
+/* ============================================
+   IMPROVED PREMIUM MODAL STYLES
+   ============================================ */
+
+.modal-header-section {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.modal-header-section .modal-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.modal-header-section h2 {
+    margin: 10px 0;
+    color: var(--text-primary);
+    font-size: 1.6rem;
+}
+
+.modal-price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+}
+
+.price-note {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+}
+
+.order-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.order-step-card {
+    background: var(--bg-tertiary);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.order-step-card.completed {
+    border-color: #10b981;
+    background: rgba(16, 185, 129, 0.05);
+}
+
+.order-step-card.active {
+    border-color: var(--brand-secondary);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.step-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.step-badge {
+    background: var(--brand-primary);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.step-status {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.step-status.done {
+    color: #10b981;
+    font-weight: 600;
+}
+
+.order-step-card h3 {
+    font-size: 1.1rem;
+    margin: 0 0 8px 0;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.order-step-card h3 i {
+    color: var(--brand-secondary);
+}
+
+.order-step-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+}
+
+.step-arrow {
+    text-align: center;
+    color: var(--text-tertiary);
+    font-size: 1.2rem;
+}
+
+.step-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+    width: 100%;
+    justify-content: center;
+}
+
+.download-btn {
+    background: #10b981;
+    color: white;
+}
+
+.download-btn:hover {
+    background: #059669;
+    transform: translateY(-1px);
+}
+
+.download-btn.done {
+    background: #6b7280;
+    cursor: default;
+}
+
+.paypal-btn {
+    background: #0070ba;
+    color: white;
+}
+
+.paypal-btn:hover {
+    background: #005ea6;
+    transform: translateY(-1px);
+}
+
+.google-form-btn {
+    background: var(--brand-primary);
+    color: white;
+}
+
+.google-form-btn:hover {
+    background: #1e3a5f;
+    transform: translateY(-1px);
+}
+
+.paypal-note {
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(0, 112, 186, 0.1);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: #0070ba;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.modal-guarantee {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.modal-guarantee i {
+    font-size: 1.5rem;
+    color: #10b981;
+    flex-shrink: 0;
+}
+
+.modal-guarantee strong {
+    display: block;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.modal-guarantee p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.modal-footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid var(--bg-tertiary);
+}
+
+.modal-footer .support-text {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.modal-footer a {
+    color: var(--brand-secondary);
+    text-decoration: none;
+}
+
+.modal-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Dark mode adjustments for modal */
+body.dark-theme .paypal-note {
+    background: rgba(0, 112, 186, 0.2);
+    color: #60a5fa;
+}
