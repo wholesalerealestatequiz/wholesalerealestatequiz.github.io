@@ -193,20 +193,30 @@ function validateAndStartQuiz() {
 // ============================================
 
 function startQuiz() {
-    // Get filtered questions based on configuration
-    state.currentQuestions = getFilteredQuestions(state.config);
+    // Show loading overlay
+    const loadingOverlay = document.getElementById('loadingOverlay');
+    if (loadingOverlay) loadingOverlay.style.display = 'flex';
     
-    if (state.currentQuestions.length === 0) {
-        alert('No questions available for your selected criteria. Please adjust your configuration.');
-        return;
-    }
-    
-    // Initialize user answers array
-    state.userAnswers = new Array(state.currentQuestions.length).fill(null);
-    state.currentQuestionIndex = 0;
-    
-    // Show countdown before starting quiz
-    showCountdown();
+    // Small delay for UX, then get questions
+    setTimeout(() => {
+        // Get filtered questions based on configuration
+        state.currentQuestions = getFilteredQuestions(state.config);
+        
+        // Hide loading overlay
+        if (loadingOverlay) loadingOverlay.style.display = 'none';
+        
+        if (state.currentQuestions.length === 0) {
+            alert('No questions available for your selected criteria. Please adjust your configuration.');
+            return;
+        }
+        
+        // Initialize user answers array
+        state.userAnswers = new Array(state.currentQuestions.length).fill(null);
+        state.currentQuestionIndex = 0;
+        
+        // Show countdown before starting quiz
+        showCountdown();
+    }, 500);
 }
 
 function showCountdown() {
