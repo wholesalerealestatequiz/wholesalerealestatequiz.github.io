@@ -1012,6 +1012,648 @@ const questionBank = [
         difficulty: "medium",
         explanation: "Tax liens are debts attached to the property. They don't prevent a sale, but they must be paid from the seller's proceeds (or by the buyer) to transfer clear title. This reduces the seller's net cash, which must be accounted for in your offer.",
         sourceChapter: "Topic: Title & Lien Resolution"
+    },
+
+    // ========== NEW QUESTIONS - WHOLESALING & INVESTMENT STRATEGY ==========
+    {
+        id: 61,
+        question: "Which two main strategies are identified for wholesale real estate acquisition?",
+        options: [
+            "Transactional and Speculative",
+            "Transactional and Relational",
+            "Relational and Traditional",
+            "Institutional and Private"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Advanced Strategies & Legal",
+        difficulty: "medium",
+        explanation: "The two main acquisition strategies are Transactional (quick, deal-focused) and Relational (building long-term relationships with agents, investors, and sellers). Relational strategies often provide free lead flow and long-term benefits.",
+        sourceChapter: "Topic: Wholesaling Strategy"
+    },
+    {
+        id: 62,
+        question: "In wholesaling, what is the term for the 'art of selling,' which involves finding buyers and closing contracts for fees?",
+        options: [
+            "Acquisition",
+            "Disposition",
+            "Capitalization",
+            "Assignment"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Buyer Marketing & List Building",
+        difficulty: "easy",
+        explanation: "Disposition is the process of selling or 'disposing' of properties to buyers. It involves finding cash buyers, marketing deals, and closing transactions for assignment fees.",
+        sourceChapter: "Topic: Disposition Fundamentals"
+    },
+    {
+        id: 63,
+        question: "According to the 'Reverse Wholesaling' strategy, where should an investor focus 80% of their revenue-producing efforts?",
+        options: [
+            "Finding distressed properties",
+            "Negotiating with sellers",
+            "Finding cash buyers and building relationships with them",
+            "Calculating repair estimates"
+        ],
+        correctAnswers: [2],
+        type: "single",
+        category: "Buyer Marketing & List Building",
+        difficulty: "medium",
+        explanation: "Reverse Wholesaling flips the traditional model - instead of finding properties first, you find buyers first. By understanding what buyers want, you can 'shop' for properties that match their needs, leading to faster deals and higher success rates.",
+        sourceChapter: "Topic: Reverse Wholesaling"
+    },
+    {
+        id: 64,
+        question: "What does the acronym 'MAO' stand for in a wholesaler's value calculation?",
+        options: [
+            "Minimum Annual Operating",
+            "Maximum Allowable Offer",
+            "Monthly Acquisition Objective",
+            "Market Appraised Option"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Making Offers & Negotiations",
+        difficulty: "easy",
+        explanation: "MAO (Maximum Allowable Offer) is the highest price a wholesaler can pay for a property while still leaving room for profit. It's typically calculated as: ARV × 70% - Repairs - Wholesale Fee.",
+        sourceChapter: "Topic: Offer Calculations"
+    },
+    {
+        id: 65,
+        question: "The 'bundle of rights' included in real property ownership typically comprises which of the following?",
+        options: [
+            "Possession, use, and the right to avoid taxes",
+            "Possession, use, enjoyment, and disposition",
+            "Improvement, occupancy, and public grant",
+            "Zoning, taxation, and acquisition"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Advanced Strategies & Legal",
+        difficulty: "medium",
+        explanation: "The bundle of rights includes: Possession (right to occupy), Use (right to use as desired within law), Enjoyment (right to use without interference), and Disposition (right to sell, lease, or transfer).",
+        sourceChapter: "Topic: Property Rights"
+    },
+    {
+        id: 66,
+        question: "Which legal term describes the reversion of property to the state when an owner dies without a will and has no legally qualified heirs?",
+        options: [
+            "Eminent Domain",
+            "Escheat",
+            "Foreclosure",
+            "Adverse Possession"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Advanced Strategies & Legal",
+        difficulty: "hard",
+        explanation: "Escheat is the legal process where property reverts to the state when the owner dies intestate (without a will) and has no identifiable heirs. This can create wholesaling opportunities through state auctions.",
+        sourceChapter: "Topic: Property Law"
+    },
+    {
+        id: 67,
+        question: "What is the primary difference between 'Police Power' and 'Eminent Domain'?",
+        options: [
+            "Police power requires just compensation, while eminent domain does not",
+            "Eminent domain is for public safety, while police power is for taking land",
+            "Police power involves regulating use without compensation, while eminent domain involves taking private property for public use with just compensation",
+            "There is no legal distinction between the two"
+        ],
+        correctAnswers: [2],
+        type: "single",
+        category: "Advanced Strategies & Legal",
+        difficulty: "hard",
+        explanation: "Police Power allows governments to regulate property use (zoning, building codes) without compensation. Eminent Domain allows governments to take private property for public use but requires 'just compensation' to the owner.",
+        sourceChapter: "Topic: Government Powers"
+    },
+    {
+        id: 68,
+        question: "What is a 'fiduciary' relationship in the context of real estate?",
+        options: [
+            "A relationship between two competitive brokers",
+            "A position of trust and confidence between a principal and an agent",
+            "A contract between a lender and a government agency",
+            "The relationship between a buyer and a seller in a 'caveat emptor' market"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Realtor Relationships",
+        difficulty: "medium",
+        explanation: "A fiduciary relationship is one of trust and confidence where the agent (fiduciary) must act in the best interests of the principal. This includes duties of loyalty, disclosure, obedience, confidentiality, and accounting.",
+        sourceChapter: "Topic: Agency Relationships"
+    },
+    {
+        id: 69,
+        question: "Which type of contract is described as a temporary partnership between two or more entities working together to close a deal?",
+        options: [
+            "A-B Contract",
+            "Option Agreement",
+            "B-C Contract",
+            "Joint Venture (JV) Contract"
+        ],
+        correctAnswers: [3],
+        type: "single",
+        category: "Advanced Strategies & Legal",
+        difficulty: "medium",
+        explanation: "A Joint Venture (JV) is a temporary partnership for a specific deal. It's like 'dating' rather than 'marriage' - you work together on one project without forming a permanent business entity.",
+        sourceChapter: "Topic: Partnership Structures"
+    },
+    {
+        id: 70,
+        question: "What is the function of an 'Assignment Contract' in wholesaling?",
+        options: [
+            "It creates a new loan for the buyer",
+            "It establishes a long-term lease",
+            "It assigns the position of ownership interest from the wholesaler to a buyer",
+            "It allows the seller to cancel the sale within three business days"
+        ],
+        correctAnswers: [2],
+        type: "single",
+        category: "Making Offers & Negotiations",
+        difficulty: "easy",
+        explanation: "An Assignment Contract transfers your contractual rights (your position in the purchase agreement) to an end buyer. You're selling your contract, not the property itself, which is the essence of wholesaling.",
+        sourceChapter: "Topic: Assignment Contracts"
+    },
+    {
+        id: 71,
+        question: "Which contract type allows a party to purchase a property within a specific timeframe for a specific price without requiring them to act?",
+        options: [
+            "Option Agreement",
+            "A-B Contract",
+            "Bilateral Contract",
+            "Assignment of Mortgage"
+        ],
+        correctAnswers: [0],
+        type: "single",
+        category: "Advanced Strategies & Legal",
+        difficulty: "medium",
+        explanation: "An Option Agreement gives the buyer the RIGHT but not the OBLIGATION to purchase at a set price within a timeframe. The buyer pays an option fee for this privilege, which may or may not be credited at closing.",
+        sourceChapter: "Topic: Option Contracts"
+    },
+    {
+        id: 72,
+        question: "How many square feet are contained in one acre of land?",
+        options: [
+            "36,000",
+            "43,560",
+            "48,000",
+            "5,280"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Market Analysis",
+        difficulty: "easy",
+        explanation: "One acre contains exactly 43,560 square feet. This is essential knowledge for calculating lot sizes, price per square foot, and land valuations.",
+        sourceChapter: "Topic: Real Estate Math"
+    },
+    {
+        id: 73,
+        question: "Which appraisal approach is most reliable for non-investment and non-marketable properties like churches or government buildings?",
+        options: [
+            "Sales Comparison Approach",
+            "Cost Approach",
+            "Income Capitalization Approach",
+            "Gross Rent Multiplier"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Market Analysis",
+        difficulty: "hard",
+        explanation: "The Cost Approach estimates value based on land value plus construction cost minus depreciation. It's best for unique properties (churches, schools) where comparable sales don't exist and the property doesn't generate income.",
+        sourceChapter: "Topic: Property Valuation"
+    },
+    {
+        id: 74,
+        question: "What is the 'After Repair Value' (ARV)?",
+        options: [
+            "The cost of materials needed for a renovation",
+            "The price a property sells for in its distressed state",
+            "The value of a property after it has been remodeled to the highest degree suitable for the area",
+            "The net profit a wholesaler makes after a deal"
+        ],
+        correctAnswers: [2],
+        type: "single",
+        category: "Market Analysis",
+        difficulty: "easy",
+        explanation: "ARV is the estimated value of a property AFTER all renovations are complete. It's the 'North Star' for wholesalers and fix-and-flip investors, used to calculate MAO and potential profit margins.",
+        sourceChapter: "Topic: ARV Calculation"
+    },
+    {
+        id: 75,
+        question: "To find the Capitalization Rate (Cap Rate) using market extraction, which formula is used?",
+        options: [
+            "Value multiplied by Net Operating Income",
+            "Net Operating Income divided by Value (or Sales Price)",
+            "Total Gross Income divided by Operating Expenses",
+            "Principal multiplied by Interest Rate"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Market Analysis",
+        difficulty: "medium",
+        explanation: "Cap Rate = NOI ÷ Value (or Purchase Price). This ratio helps investors compare the potential return on different investment properties regardless of financing.",
+        sourceChapter: "Topic: Investment Analysis"
+    },
+    {
+        id: 76,
+        question: "In real estate math, a 'banker's year' is typically composed of how many days?",
+        options: [
+            "365",
+            "360",
+            "366",
+            "300"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Closing & Escrow Coordination",
+        difficulty: "medium",
+        explanation: "A banker's year uses 360 days (12 months × 30 days) for simpler calculations when prorating expenses like taxes, insurance, and HOA fees at closing.",
+        sourceChapter: "Topic: Closing Calculations"
+    },
+    {
+        id: 77,
+        question: "What does the acronym 'TRID' stand for?",
+        options: [
+            "TILA-RESPA Integrated Disclosure",
+            "Total Real Estate Investment Debt",
+            "Trust in Real Estate and Insurance Document",
+            "Tax and Revenue Internal Division"
+        ],
+        correctAnswers: [0],
+        type: "single",
+        category: "Closing & Escrow Coordination",
+        difficulty: "hard",
+        explanation: "TRID (TILA-RESPA Integrated Disclosure) combined Truth in Lending Act (TILA) and Real Estate Settlement Procedures Act (RESPA) disclosures into simplified Loan Estimate and Closing Disclosure forms.",
+        sourceChapter: "Topic: Lending Regulations"
+    },
+    {
+        id: 78,
+        question: "What is the definition of 'Loan-to-Value Ratio' (LTV)?",
+        options: [
+            "The relationship between the annual interest and the principal",
+            "The ratio of monthly income to house payments",
+            "The relationship between the amount of the mortgage loan and the appraised value of the property",
+            "The difference between the list price and the final sales price"
+        ],
+        correctAnswers: [2],
+        type: "single",
+        category: "Advanced Strategies & Legal",
+        difficulty: "medium",
+        explanation: "LTV = Loan Amount ÷ Property Value. A higher LTV means more leverage but also more risk. Most conventional lenders require an LTV of 80% or less to avoid PMI.",
+        sourceChapter: "Topic: Lending Fundamentals"
+    },
+    {
+        id: 79,
+        question: "When hiring for a wholesale business, which personality trait is characterized by an individual being driven to achieve goals?",
+        options: [
+            "Openness",
+            "Agreeableness",
+            "Conscientiousness",
+            "Neuroticism"
+        ],
+        correctAnswers: [2],
+        type: "single",
+        category: "Lead Management & Automation",
+        difficulty: "medium",
+        explanation: "Conscientiousness (from the 'Big Five' personality traits) indicates someone who is organized, dependable, and driven to achieve goals - ideal traits for acquisitions managers and key team members.",
+        sourceChapter: "Topic: Building Your Team"
+    },
+    {
+        id: 80,
+        question: "In Clothier's business philosophy, what does 'MWA' stand for, and why should it be avoided by the business owner?",
+        options: [
+            "Minimum Wage Activities; because owners should use technology or hire others for these tasks to focus on higher-value growth",
+            "Monthly Weighted Average; because it distorts profit margins",
+            "Market Wholesale Acquisition; because it is too risky",
+            "Mandatory Work Assignments; because they reduce employee morale"
+        ],
+        correctAnswers: [0],
+        type: "single",
+        category: "Lead Management & Automation",
+        difficulty: "medium",
+        explanation: "MWA = Minimum Wage Activities. These are tasks like data entry, cold calling, or administrative work that should be automated or delegated so the owner can focus on revenue-generating activities and strategic growth.",
+        sourceChapter: "Topic: Business Scaling"
+    },
+    {
+        id: 81,
+        question: "According to Damji, what is the first step to scaling a wholesaling empire?",
+        options: [
+            "Hiring an acquisitions manager",
+            "Establishing your Mission and Vision",
+            "Creating a functional organizational structure",
+            "Setting up automated SMS marketing"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Lead Management & Automation",
+        difficulty: "medium",
+        explanation: "Before hiring or building systems, you must establish your Mission (why you exist) and Vision (where you're going). This provides direction and helps attract team members who share your values.",
+        sourceChapter: "Topic: Business Scaling"
+    },
+    {
+        id: 82,
+        question: "What is the core principle behind 'Reverse Wholesaling'?",
+        options: [
+            "Finding a property at a 50% discount and then cold-calling for buyers",
+            "Finding active cash buyers first, identifying their specific needs, and then 'shopping' for properties that match those needs",
+            "Purchasing a property with a bank loan and immediately refinancing it",
+            "Using high-pressure sales tactics to convince sellers to lower their prices"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Buyer Marketing & List Building",
+        difficulty: "medium",
+        explanation: "Reverse Wholesaling is about understanding buyer needs FIRST. By knowing exactly what your buyers want (price range, location, property type), you can target your marketing and make offers confidently knowing you have a buyer waiting.",
+        sourceChapter: "Topic: Reverse Wholesaling"
+    },
+    {
+        id: 83,
+        question: "Which of the following is considered an example of 'forced appreciation'?",
+        options: [
+            "Waiting for the market prices in a specific ZIP code to naturally rise",
+            "Renovating a kitchen with upgraded materials or adding a swimming pool",
+            "Obtaining a lower interest rate on a primary mortgage",
+            "Selling a property for the same price it was purchased for without any changes"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Market Analysis",
+        difficulty: "easy",
+        explanation: "Forced appreciation means actively increasing a property's value through improvements, unlike natural/market appreciation which happens passively. Renovations, additions, and upgrades 'force' the value up.",
+        sourceChapter: "Topic: Value-Add Strategies"
+    },
+    {
+        id: 84,
+        question: "What is a 'Hot Zone' according to Kent Clothier?",
+        options: [
+            "An area where a property fire has recently occurred",
+            "A neighborhood with high crime rates where property values are low",
+            "A specific ZIP code or region where public records show the majority of cash transactions are occurring",
+            "The location of a wholesaler's main headquarters"
+        ],
+        correctAnswers: [2],
+        type: "single",
+        category: "Market Analysis",
+        difficulty: "medium",
+        explanation: "Hot Zones are areas with high investor activity, identified by analyzing public records for cash purchases. These areas indicate strong buyer demand, making them ideal targets for wholesale marketing.",
+        sourceChapter: "Topic: Market Selection"
+    },
+    {
+        id: 85,
+        question: "In Jamil Damji's business model, what does the core value 'Cold Showers' represent?",
+        options: [
+            "Saving money on utility bills to increase net profit",
+            "Getting out of one's comfort zone, seeking hard work, and seeing obstacles as opportunities",
+            "A mandatory requirement for all new acquisitions managers",
+            "The feeling of losing a deal to a competitor"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Lead Management & Automation",
+        difficulty: "medium",
+        explanation: "'Cold Showers' is a metaphor for embracing discomfort and challenges. It represents the mindset of pursuing growth through hard work and viewing obstacles as opportunities rather than setbacks.",
+        sourceChapter: "Topic: Business Mindset"
+    },
+    {
+        id: 86,
+        question: "Under the 'Straight-Line Method' of depreciation, how is the annual depreciation amount calculated?",
+        options: [
+            "Multiplying the land value by the interest rate",
+            "Dividing the initial cost of an improvement (minus salvage value) by its estimated economic life",
+            "Subtracting the mortgage balance from the sales price",
+            "Adding the replacement cost to the land value"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Market Analysis",
+        difficulty: "hard",
+        explanation: "Straight-line depreciation = (Cost - Salvage Value) ÷ Useful Life. For example, a $100,000 building with 27.5 year life depreciates at approximately $3,636 per year.",
+        sourceChapter: "Topic: Depreciation"
+    },
+    {
+        id: 87,
+        question: "What is the 'Gross Debt Service' (GDS) ratio?",
+        options: [
+            "The relationship between total assets and total liabilities",
+            "The lender's allowable ratio of gross monthly payments (Principal, Interest, and Taxes) to the gross monthly income of a borrower",
+            "The percentage of commission paid to a listing broker",
+            "The total amount of debt an investor carries across all properties"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Advanced Strategies & Legal",
+        difficulty: "hard",
+        explanation: "GDS ratio measures housing costs (PITI) as a percentage of gross income. Lenders typically want GDS below 28-32%. This helps determine how much a buyer can afford.",
+        sourceChapter: "Topic: Lending Qualifications"
+    },
+    {
+        id: 88,
+        question: "What is the difference between 'Real Property' and 'Personal Property'?",
+        options: [
+            "Real property is owned by corporations; personal property is owned by individuals",
+            "Real property consists of land and things permanently affixed to it (immovable); personal property is generally movable (chattels)",
+            "Personal property cannot be taxed, whereas real property can",
+            "There is no legal distinction between the two"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Advanced Strategies & Legal",
+        difficulty: "medium",
+        explanation: "Real property = land and permanent attachments (buildings, fixtures). Personal property (chattels) = movable items (furniture, appliances). This distinction matters for contracts, taxes, and what conveys with a sale.",
+        sourceChapter: "Topic: Property Classifications"
+    },
+    {
+        id: 89,
+        question: "What is an 'Easement by Prescription'?",
+        options: [
+            "A right-of-way granted in a written deed for a fee",
+            "The acquisition of a right to use another's land through continuous, uninterrupted use for a specific statutory period",
+            "A temporary permit issued by a city for construction",
+            "The reversion of land to the state when an owner dies"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Advanced Strategies & Legal",
+        difficulty: "hard",
+        explanation: "Easement by Prescription is acquired through continuous, open, and hostile use of another's property for a statutory period (often 10-20 years). It's similar to adverse possession but grants use rights rather than ownership.",
+        sourceChapter: "Topic: Property Rights"
+    },
+    {
+        id: 90,
+        question: "Which legal term describes a person who dies without a will?",
+        options: [
+            "Testate",
+            "Intestate",
+            "Grantor",
+            "Escheat"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Advanced Strategies & Legal",
+        difficulty: "medium",
+        explanation: "Intestate = dying without a valid will. Testate = dying with a will. When someone dies intestate, state laws determine how property is distributed among heirs.",
+        sourceChapter: "Topic: Estate Law"
+    },
+    {
+        id: 91,
+        question: "What is 'Negative Amortization'?",
+        options: [
+            "Paying off a loan earlier than the scheduled term",
+            "A situation where monthly payments do not cover all the interest due, causing the loan balance to increase over time",
+            "The reduction of a property's value due to economic decline",
+            "A legal process used to remove a lien from a property"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Advanced Strategies & Legal",
+        difficulty: "hard",
+        explanation: "Negative amortization occurs when loan payments are less than the interest owed, causing unpaid interest to be added to the principal. This increases the loan balance over time - a dangerous situation for borrowers.",
+        sourceChapter: "Topic: Mortgage Types"
+    },
+    {
+        id: 92,
+        question: "What is a 'Take-out Loan'?",
+        options: [
+            "A loan used to purchase food for a business meeting",
+            "A long-term permanent loan that replaces short-term construction (interim) financing",
+            "A loan that is defaulted upon and 'taken out' of a bank's portfolio",
+            "The cash an investor 'takes out' of a deal at closing"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Advanced Strategies & Legal",
+        difficulty: "hard",
+        explanation: "A take-out loan is permanent financing that 'takes out' (replaces) short-term construction or bridge loans. It's typically obtained after a project is complete and stabilized.",
+        sourceChapter: "Topic: Construction Financing"
+    },
+    {
+        id: 93,
+        question: "In the 'Old School' wholesaling model, what is the first step?",
+        options: [
+            "Building a relationship with a cash buyer",
+            "Getting a discounted property under contract",
+            "Automating a marketing system",
+            "Hiring a property management firm"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Seller Lead Generation",
+        difficulty: "easy",
+        explanation: "Traditional (Old School) wholesaling starts with finding and contracting properties, then finding buyers. Reverse Wholesaling flips this by finding buyers first.",
+        sourceChapter: "Topic: Wholesaling Methods"
+    },
+    {
+        id: 94,
+        question: "How does a 'Joint Venture' (JV) typically differ from a permanent partnership in real estate?",
+        options: [
+            "JVs require a corporate seal, whereas partnerships do not",
+            "A JV is often a temporary arrangement for a specific project/deal (like 'dating'), while a permanent partnership involves shared entities and long-term commitment (like 'marriage')",
+            "Partnerships are only legal for commercial properties",
+            "JVs do not allow for the sharing of profits"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Networking & REIA",
+        difficulty: "medium",
+        explanation: "JVs are deal-specific partnerships that dissolve after the transaction. They're flexible and low-commitment compared to formal partnerships with shared liability and ongoing obligations.",
+        sourceChapter: "Topic: Business Structures"
+    },
+    {
+        id: 95,
+        question: "What is the primary difference between a principal and a representative in a real estate transaction?",
+        options: [
+            "A representative has an ownership interest; a principal does not",
+            "A principal acts solely as the buyer or seller in the contract; a representative acts for someone else",
+            "Only a representative can force appreciation",
+            "A principal must be a licensed real estate broker"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Advanced Strategies & Legal",
+        difficulty: "medium",
+        explanation: "A principal is a party to the transaction (buyer/seller). A representative (agent) acts on behalf of a principal. Wholesalers are principals when they sign contracts, not representatives.",
+        sourceChapter: "Topic: Transaction Roles"
+    },
+    {
+        id: 96,
+        question: "In Jamil Damji's wholesaling model, what is the 'North Star' for determining property potential?",
+        options: [
+            "The Maximum Allowable Offer (MAO)",
+            "The original purchase price",
+            "The After Repair Value (ARV)",
+            "The current tax assessment"
+        ],
+        correctAnswers: [2],
+        type: "single",
+        category: "Market Analysis",
+        difficulty: "easy",
+        explanation: "ARV is the 'North Star' because all other calculations flow from it. Once you know what a property will be worth after repairs, you can calculate MAO, repair budget, and profit margins.",
+        sourceChapter: "Topic: Deal Analysis"
+    },
+    {
+        id: 97,
+        question: "What is the 'Appraisal Rule' for selecting comparable properties regarding time?",
+        options: [
+            "Comps should be no older than one year",
+            "Comps should be no older than 90 days; if older, the ARV should be adjusted down 10-20%",
+            "You should only use properties that sold in the last 30 days",
+            "Time does not matter as long as the property is in the same subdivision"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Market Analysis",
+        difficulty: "medium",
+        explanation: "Ideally, comps should be within 90 days. Older comps may not reflect current market conditions. If you must use older comps, adjust your ARV estimate downward to account for uncertainty.",
+        sourceChapter: "Topic: Comparative Market Analysis"
+    },
+    {
+        id: 98,
+        question: "To convert square feet to square yards, you must divide the total square footage by:",
+        options: [
+            "3",
+            "9",
+            "12",
+            "144"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Market Analysis",
+        difficulty: "easy",
+        explanation: "Since 1 yard = 3 feet, 1 square yard = 3×3 = 9 square feet. Divide square feet by 9 to get square yards. This is useful for flooring and carpet calculations.",
+        sourceChapter: "Topic: Real Estate Math"
+    },
+    {
+        id: 99,
+        question: "Which ratio is used by lenders to measure a borrower's ability to pay principal, interest, and taxes relative to their gross monthly income?",
+        options: [
+            "Debt-to-Equity Ratio",
+            "Gross Debt Service (GDS) Ratio",
+            "Loan-to-Value Ratio",
+            "Capitalization Rate"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Advanced Strategies & Legal",
+        difficulty: "medium",
+        explanation: "GDS ratio = Housing Costs (PITI) ÷ Gross Monthly Income. Lenders use this to ensure borrowers aren't overextending on housing payments.",
+        sourceChapter: "Topic: Lending Qualifications"
+    },
+    {
+        id: 100,
+        question: "What is the purpose of 'Business Rules' in the context of scaling a wholesaling business?",
+        options: [
+            "To increase the workload of the owner",
+            "To empower people to do their jobs without owner involvement",
+            "To ensure the IRS accepts the company's tax filings",
+            "To prevent the hiring of outside contractors"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Lead Management & Automation",
+        difficulty: "medium",
+        explanation: "Business Rules are documented procedures that allow team members to make decisions independently. They create an 'autopilot' system so the business can run without constant owner oversight.",
+        sourceChapter: "Topic: Systems & Processes"
     }
 ];
 
