@@ -1,6 +1,7 @@
 // ============================================
 // WHOLESALE REAL ESTATE QUIZ - APPLICATION LOGIC
 // Comprehensive State Management and Quiz Engine
+// 100% FREE - No Paywalls!
 // ============================================
 
 // ============================================
@@ -10,16 +11,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Inject config values into DOM
     if (typeof APP_CONFIG !== 'undefined') {
-        // Payment & Form Links
-        const paypalLink = document.getElementById('paypalLink');
-        const googleFormLink = document.getElementById('googleFormLink');
+        // Support email
         const supportEmail = document.getElementById('supportEmail');
-        
-        if (paypalLink) paypalLink.href = APP_CONFIG.PAYPAL_LINK;
-        if (googleFormLink) googleFormLink.href = APP_CONFIG.GOOGLE_FORM_LINK;
         if (supportEmail) supportEmail.textContent = APP_CONFIG.SUPPORT_EMAIL;
         
-        console.log('✓ Config loaded successfully');
+        console.log('✓ Config loaded successfully - All features FREE!');
     }
 });
 
@@ -726,11 +722,10 @@ function generateRecommendations(categoryResults) {
         }
     };
     
-    // FREE VERSION: Show only top 3 recommendations, lock the rest
-    const freeLimit = 3;
+    // ALL RECOMMENDATIONS ARE FREE - No limits!
     
-    // Add recommendations for weak areas (limited to 3 in free version)
-    weakCategories.slice(0, freeLimit).forEach(cat => {
+    // Add recommendations for ALL weak areas
+    weakCategories.forEach(cat => {
         if (recMap[cat]) {
             recommendations.push(`
                 <div class="recommendation-item">
@@ -741,24 +736,6 @@ function generateRecommendations(categoryResults) {
             `);
         }
     });
-    
-    // If there are more than 3 weak areas, show locked recommendations
-    if (weakCategories.length > freeLimit) {
-        const lockedCount = weakCategories.length - freeLimit;
-        recommendations.push(`
-            <div class="recommendation-item locked-recommendation">
-                <div class="locked-content blurred">
-                    <h4>Additional Focus Areas</h4>
-                    <p>You have ${lockedCount} more areas that need attention with detailed study plans...</p>
-                    <p><strong>📖 Study:</strong> Customized chapters based on your results</p>
-                </div>
-                <div class="unlock-overlay-small">
-                    <div class="lock-icon">🔒</div>
-                    <p><strong>Unlock ${lockedCount} More Recommendations</strong></p>
-                </div>
-            </div>
-        `);
-    }
     
     // Add general recommendations if doing well overall (always show this)
     if (weakCategories.length === 0) {
@@ -774,21 +751,17 @@ function generateRecommendations(categoryResults) {
             </div>
         `);
     } else {
-        // For users with weak areas, add teaser about premium actionable steps
+        // Encourage users and mention the quiz is free
         recommendations.push(`
-            <div class="recommendation-item premium-teaser">
-                <h4><i class="fas fa-brain"></i> Want a Complete Performance Analysis?</h4>
-                <p>The free version shows your top ${freeLimit} focus areas. Upgrade to Premium to get:</p>
+            <div class="recommendation-item encouragement-card">
+                <h4><i class="ri-lightbulb-flash-line"></i> You've Got This!</h4>
+                <p>You now have access to <strong>all ${weakCategories.length} personalized recommendations</strong> above. This quiz is completely free - no hidden content!</p>
                 <ul>
-                    <li><i class="fas fa-check"></i> All ${weakCategories.length} personalized recommendations</li>
-                    <li><i class="fas fa-check"></i> Deep thinking pattern analysis</li>
-                    <li><i class="fas fa-check"></i> Decision-making framework assessment</li>
-                    <li><i class="fas fa-check"></i> Strategic gaps identification</li>
-                    <li><i class="fas fa-check"></i> Comprehensive improvement roadmap</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Review each recommendation carefully</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Study the referenced book chapters</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Retake the quiz to track your progress</li>
                 </ul>
-                <button onclick="document.getElementById('unlockPremiumBtn').scrollIntoView({behavior:'smooth'})" class="mini-unlock-btn primary-btn">
-                    <i class="fas fa-unlock"></i> See Full Analysis - $14.99
-                </button>
+                <p style="margin-top: 1rem; color: var(--text-secondary);">If this quiz helped you, consider <a href="https://www.paypal.com/paypalme/1TheChosenOne1" target="_blank" style="color: var(--primary-color);">supporting us</a> ❤️</p>
             </div>
         `);
     }
@@ -834,31 +807,7 @@ function attachEventListeners() {
     elements.retakeBtn.addEventListener('click', retakeQuiz);
     elements.newConfigBtn.addEventListener('click', () => showPage('configPage'));
     
-    // Premium feature
-    const unlockPremiumBtn = document.getElementById('unlockPremiumBtn');
-    const closePremiumModal = document.getElementById('closePremiumModal');
-    const premiumOrderModal = document.getElementById('premiumOrderModal');
-    const premiumSuccessModal = document.getElementById('premiumSuccessModal');
-    
-    if (unlockPremiumBtn) {
-        unlockPremiumBtn.addEventListener('click', handlePremiumPurchase);
-    }
-    
-    if (closePremiumModal) {
-        closePremiumModal.addEventListener('click', () => {
-            premiumOrderModal.style.display = 'none';
-        });
-    }
-    
-    // Close modal on outside click (for the order modal)
-    window.addEventListener('click', (e) => {
-        if (e.target === premiumOrderModal) {
-            premiumOrderModal.style.display = 'none';
-        }
-        if (e.target === premiumSuccessModal) {
-            premiumSuccessModal.style.display = 'none';
-        }
-    });
+    // All features are now FREE - no premium modals needed!
 }
 
 function toggleDetailedFeedbackDisplay() {
@@ -889,22 +838,6 @@ function retakeQuiz() {
     // Restart quiz with same configuration
     startQuiz();
 }
-
-// ============================================
-// PREMIUM FEATURE - MANUAL PAYMENT WORKFLOW
-// ============================================
-
-function handlePremiumPurchase() {
-    // Show modal with Google Form + PayPal links
-    const modal = document.getElementById('premiumOrderModal');
-    modal.style.display = 'block';
-    
-    // Store results in sessionStorage for later reference if needed
-    storeResultsForPremium();
-}
-
-function storeResultsForPremium() {
-    // Calculate and store results for when you manually generate study plans
     const categoryResults = {};
     state.currentQuestions.forEach((question, index) => {
         if (!categoryResults[question.category]) {
@@ -1139,176 +1072,8 @@ window.downloadQuizResults = function() {
     return true;
 };
 
-// Enhanced download function that marks step complete
-window.downloadAndMarkComplete = function() {
-    const success = window.downloadQuizResults();
-    if (success) {
-        // Mark step 1 as complete
-        const step1Card = document.getElementById('step1Card');
-        const step1Status = document.getElementById('step1Status');
-        const downloadBtn = document.getElementById('downloadBtn');
-        
-        if (step1Card) step1Card.classList.add('completed');
-        if (step1Status) {
-            step1Status.innerHTML = '<i class="ri-check-line"></i> Done';
-            step1Status.classList.add('done');
-        }
-        if (downloadBtn) {
-            downloadBtn.innerHTML = '<i class="ri-check-line"></i> Downloaded!';
-            downloadBtn.classList.add('done');
-        }
-        
-        // Activate step 2
-        const step2Card = document.getElementById('step2Card');
-        if (step2Card) step2Card.classList.add('active');
-    }
-};
-
-// Track PayPal click
-window.markPaypalClicked = function() {
-    // Mark step 2 as in progress
-    const step2Status = document.getElementById('step2Status');
-    if (step2Status) {
-        step2Status.textContent = '🔄 In Progress';
-    }
-    
-    // After a delay, assume they completed payment
-    setTimeout(() => {
-        const step2Card = document.getElementById('step2Card');
-        const step3Card = document.getElementById('step3Card');
-        
-        if (step2Card) step2Card.classList.add('completed');
-        if (step2Status) {
-            step2Status.innerHTML = '<i class="ri-check-line"></i> Done';
-            step2Status.classList.add('done');
-        }
-        if (step3Card) step3Card.classList.add('active');
-    }, 3000);
-};
-
-function generateAndDownloadStudyPlan() {
-    // Check if premium study plan script is loaded
-    if (typeof generatePremiumStudyPlan !== 'function') {
-        alert('Premium feature is loading... Please try again in a moment.');
-        return;
-    }
-    
-    // Calculate results for study plan
-    const categoryResults = {};
-    state.currentQuestions.forEach((question, index) => {
-        if (!categoryResults[question.category]) {
-            categoryResults[question.category] = {
-                correct: 0,
-                total: 0
-            };
-        }
-        categoryResults[question.category].total++;
-        
-        const userAnswer = state.userAnswers[index];
-        const correctAnswers = question.correctAnswers;
-        
-        if (question.type === 'single') {
-            if (userAnswer === correctAnswers[0]) {
-                categoryResults[question.category].correct++;
-            }
-        } else {
-            if (Array.isArray(userAnswer)) {
-                const correctSelected = userAnswer.filter(a => correctAnswers.includes(a)).length;
-                const incorrectSelected = userAnswer.filter(a => !correctAnswers.includes(a)).length;
-                if (correctSelected === correctAnswers.length && incorrectSelected === 0) {
-                    categoryResults[question.category].correct++;
-                }
-            }
-        }
-    });
-    
-    // Calculate overall percentage
-    let totalPoints = 0;
-    let earnedPoints = 0;
-    state.currentQuestions.forEach((question, index) => {
-        const userAnswer = state.userAnswers[index];
-        const correctAnswers = question.correctAnswers;
-        
-        if (question.type === 'single') {
-            totalPoints++;
-            if (userAnswer === correctAnswers[0]) {
-                earnedPoints++;
-            }
-        } else {
-            totalPoints += correctAnswers.length;
-            if (Array.isArray(userAnswer)) {
-                const correctSelected = userAnswer.filter(a => correctAnswers.includes(a)).length;
-                const incorrectSelected = userAnswer.filter(a => !correctAnswers.includes(a)).length;
-                const points = Math.max(0, correctSelected - incorrectSelected);
-                earnedPoints += points;
-            }
-        }
-    });
-    
-    const percentage = Math.round((earnedPoints / totalPoints) * 100);
-    
-    const quizResults = {
-        percentage: percentage,
-        difficulty: state.config.difficulty,
-        date: new Date()
-    };
-    
-    // Generate study plan
-    const studyPlan = generatePremiumStudyPlan(
-        quizResults,
-        categoryResults,
-        state.userAnswers,
-        state.currentQuestions
-    );
-    
-    // Format as HTML
-    const htmlContent = formatStudyPlanHTML(studyPlan);
-    
-    // Download as HTML file
-    const blob = new Blob([htmlContent], { type: 'text/html' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `Personalized-Wholesale-Study-Plan-${new Date().toISOString().split('T')[0]}.html`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-    
-    // Update modal
-    setTimeout(() => {
-        const modal = document.getElementById('premiumSuccessModal');
-        const modalContent = modal.querySelector('.modal-content');
-        modalContent.innerHTML = `
-            <span class="close-modal" id="closePremiumModalSuccess">&times;</span>
-            <div class="success-icon">🎉</div>
-            <h2>Your Study Plan is Ready!</h2>
-            <p>Your personalized 30-day study plan has been downloaded.</p>
-            <p style="margin-top: 20px; color: #6b7280;">Check your Downloads folder for:<br><strong>Personalized-Wholesale-Study-Plan.html</strong></p>
-            <p style="margin-top: 15px; font-size: 0.95rem;">Open it in your browser and print or save as PDF for easy reference!</p>
-            <button onclick="document.getElementById('premiumSuccessModal').style.display='none'" style="margin-top: 20px; padding: 12px 24px; background: #2563eb; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 1rem;">Got it!</button>
-        `;
-        
-        // Re-attach close button listener
-        const newCloseBtn = document.getElementById('closePremiumModalSuccess');
-        if (newCloseBtn) {
-            newCloseBtn.addEventListener('click', () => {
-                modal.style.display = 'none';
-            });
-        }
-    }, 1000);
-}
-
-// Stripe integration placeholder
-// In production, replace this with actual Stripe checkout
-function initializeStripePayment() {
-    // const stripe = Stripe('your_publishable_key');
-    // const elements = stripe.elements();
-    // Implementation here
-}
-
 // ============================================
-// UPGRADE 2: PREVENT DATA LOSS
+// PREVENT DATA LOSS
 // Warn users before leaving page during quiz
 // ============================================
 window.addEventListener('beforeunload', (e) => {

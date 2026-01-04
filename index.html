@@ -372,113 +372,44 @@
                 </div>
             </div>
 
-            <!-- Premium Study Plan Offer -->
-            <!-- Updated Premium Section -->
-            <div class="results-section premium-offer-section" id="premiumOfferSection">
-                <div class="premium-offer-card">
-                    <div class="premium-badge">PROFESSIONAL REPORT</div>
+            <!-- Support Section - Donation -->
+            <div class="results-section donation-section" id="donationSection">
+                <div class="donation-card">
+                    <div class="donation-icon">
+                        <i class="ri-heart-fill" style="color: #e74c3c; font-size: 2.5rem;"></i>
+                    </div>
                     
-                    <h2 class="premium-title">Download Your Career Roadmap</h2>
-                    <p class="premium-description">
-                        Get a 20+ page PDF analysis comparing your current knowledge against industry standards. Includes a 30-day corrective action plan based on your weak points.
+                    <h2 class="donation-title">Enjoying This Free Quiz?</h2>
+                    <p class="donation-description">
+                        This quiz is <strong>100% free</strong> with no hidden paywalls! All 50 questions, detailed explanations, 
+                        and study recommendations are yours to keep. If this helped you learn and you'd like to support 
+                        future improvements, consider buying me a coffee! ☕
                     </p>
                     
-                    <div class="feature-comparison">
-                        <!-- Keep existing comparison columns but ensure text colors are fixed -->
-                        <div class="comparison-column free-column">
-                            <h3 class="column-title">Standard Results</h3>
-                            <ul>
-                                <li class="column-item">Online Score Display</li>
-                                <li class="column-item">Basic Category Breakdown</li>
-                                <li class="column-item">Web-based Recommendations</li>
-                            </ul>
+                    <div class="donation-features">
+                        <div class="donation-feature">
+                            <i class="ri-checkbox-circle-fill"></i>
+                            <span>All questions unlocked</span>
                         </div>
-                        <div class="comparison-column premium-column">
-                            <h3 class="column-title">Professional Audit ($14.99)</h3>
-                            <ul>
-                                <li class="column-item-highlight"><strong>PDF Download (Keep Forever)</strong></li>
-                                <li class="column-item-highlight">Cognitive Bias Analysis</li>
-                                <li class="column-item-highlight">Decision Framework Audit</li>
-                                <li class="column-item-highlight">30-Day Syllabus (Book & Chapter Mapping)</li>
-                            </ul>
+                        <div class="donation-feature">
+                            <i class="ri-checkbox-circle-fill"></i>
+                            <span>Full detailed explanations</span>
+                        </div>
+                        <div class="donation-feature">
+                            <i class="ri-checkbox-circle-fill"></i>
+                            <span>Complete study recommendations</span>
+                        </div>
+                        <div class="donation-feature">
+                            <i class="ri-checkbox-circle-fill"></i>
+                            <span>Download your results anytime</span>
                         </div>
                     </div>
 
-                    <div class="premium-cta">
-                        <button id="unlockPremiumBtn" class="premium-btn">
-                            Get My Professional Analysis
-                        </button>
-                        <div class="payment-icons">
-                            <i class="ri-paypal-fill" style="color: #003087;"></i>
-                            <i class="ri-visa-fill" style="color: #1a1f71;"></i>
-                            <i class="ri-mastercard-fill" style="color: #eb001b;"></i>
-                            <span>SSL Secure Checkout</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Premium Order Modal (Hidden by default) -->
-            <div id="premiumOrderModal" class="modal" style="display: none;">
-                <div class="modal-content premium-order-content">
-                    <span class="close-modal" id="closePremiumModal" onclick="document.getElementById('premiumOrderModal').style.display='none'">&times;</span>
-                    
-                    <div class="modal-header-section">
-                        <div class="modal-icon"><i class="ri-focus-3-line"></i></div>
-                        <h2>Get Your Professional Analysis</h2>
-                        <p class="modal-price">$14.99 <span class="price-note">• Delivered within 24 hours</span></p>
-                    </div>
-                    
-                    <div class="order-flow">
-                        <!-- Step 1: Download First -->
-                        <div class="order-step-card" id="step1Card">
-                            <div class="step-header">
-                                <span class="step-badge">Step 1</span>
-                                <span class="step-status" id="step1Status"><i class="ri-time-line"></i> Pending</span>
-                            </div>
-                            <h3><i class="ri-file-download-line"></i> Download Your Results</h3>
-                            <p>First, save your quiz results - you'll need this file for your order.</p>
-                            <button onclick="downloadAndMarkComplete()" class="step-btn download-btn" id="downloadBtn">
-                                <i class="ri-download-line"></i> Download Results File
-                            </button>
-                        </div>
-
-                        <div class="step-arrow"><i class="ri-arrow-down-line"></i></div>
-
-                        <!-- Step 2: Pay with PayPal -->
-                        <div class="order-step-card" id="step2Card">
-                            <div class="step-header">
-                                <span class="step-badge">Step 2</span>
-                                <span class="step-status" id="step2Status"><i class="ri-time-line"></i> Waiting</span>
-                            </div>
-                            <h3><i class="ri-paypal-line"></i> Pay Securely with PayPal</h3>
-                            <p>Complete your payment. Include your <strong>email address</strong> in the PayPal note so we can send your analysis.</p>
-                            <a id="paypalLink" href="#" target="_blank" rel="noopener noreferrer" class="step-btn paypal-btn" onclick="markPaypalClicked()">
-                                <i class="ri-paypal-fill"></i> Pay $14.99 with PayPal
-                            </a>
-                            <div class="paypal-note">
-                                <i class="ri-information-line"></i> Add your email in PayPal's "Add a note" field
-                            </div>
-                        </div>
-
-                        <div class="step-arrow"><i class="ri-arrow-down-line"></i></div>
-
-                        <!-- Step 3: Submit Form -->
-                        <div class="order-step-card" id="step3Card">
-                            <div class="step-header">
-                                <span class="step-badge">Step 3</span>
-                                <span class="step-status" id="step3Status"><i class="ri-time-line"></i> Waiting</span>
-                            </div>
-                            <h3><i class="ri-send-plane-line"></i> Submit Your Order</h3>
-                            <p>Upload your results file and confirm your email. That's it!</p>
-                            <a id="googleFormLink" href="#" target="_blank" rel="noopener noreferrer" class="step-btn google-form-btn">
-                                <i class="ri-external-link-line"></i> Complete Order Form
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="modal-footer">
-                        <p class="support-text">Questions? <a href="mailto:wholesalerealestatequiz@gmail.com">wholesalerealestatequiz@gmail.com</a></p>
+                    <div class="donation-cta">
+                        <a href="https://www.paypal.com/paypalme/1TheChosenOne1" target="_blank" rel="noopener noreferrer" class="donation-btn">
+                            <i class="ri-paypal-fill"></i> Support with PayPal
+                        </a>
+                        <p class="donation-note">Any amount helps! No pressure, totally optional 💙</p>
                     </div>
                 </div>
             </div>
@@ -527,7 +458,7 @@
                     <h4>Resources</h4>
                     <ul>
                         <li><a href="#" onclick="showPage('homePage'); return false;">Take the Quiz</a></li>
-                        <li><a href="#" onclick="showPage('resultsPage'); setTimeout(function(){ document.getElementById('premiumOfferSection').scrollIntoView({behavior:'smooth'}); }, 100); return false;">Get Premium Analysis</a></li>
+                        <li><a href="https://www.paypal.com/paypalme/1TheChosenOne1" target="_blank" rel="noopener noreferrer">Support Us ❤️</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
