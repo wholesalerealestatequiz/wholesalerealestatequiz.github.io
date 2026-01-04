@@ -1654,6 +1654,649 @@ const questionBank = [
         difficulty: "medium",
         explanation: "Business Rules are documented procedures that allow team members to make decisions independently. They create an 'autopilot' system so the business can run without constant owner oversight.",
         sourceChapter: "Topic: Systems & Processes"
+    },
+    // =====================================================
+    // Questions 101-140: From Real Estate Exam Study Materials
+    // =====================================================
+    {
+        id: 101,
+        question: "Severalty ownership of real estate means:",
+        options: [
+            "Ownership by several persons",
+            "There are several ways to own real estate",
+            "Sole ownership by a single person",
+            "A severance in condemnation proceedings"
+        ],
+        correctAnswers: [2],
+        type: "single",
+        category: "Property Ownership",
+        difficulty: "medium",
+        explanation: "Ownership in severalty means ownership by one person only. The term comes from 'severed' from other owners.",
+        sourceChapter: "California RE Exam Study Manual"
+    },
+    {
+        id: 102,
+        question: "A valid deed must contain all of the following EXCEPT:",
+        options: [
+            "The signature of the grantor",
+            "A granting clause",
+            "An adequate description of the property",
+            "An acknowledgment of the grantor's signature"
+        ],
+        correctAnswers: [3],
+        type: "single",
+        category: "Legal Concepts",
+        difficulty: "medium",
+        explanation: "While acknowledgment is required for recording, it is not required for a deed to be valid. The essential elements are: grantor, grantee, granting clause, description, and signature.",
+        sourceChapter: "California RE Exam Study Manual"
+    },
+    {
+        id: 103,
+        question: "Escheat is a legal term meaning:",
+        options: [
+            "That a fraud has been committed",
+            "Property has reverted to the State",
+            "An agent's license has been revoked",
+            "Property under a trust deed may be foreclosed"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Legal Concepts",
+        difficulty: "medium",
+        explanation: "Escheat is the reversion of property to the state when a person dies without a will and without heirs.",
+        sourceChapter: "California RE Exam Study Manual"
+    },
+    {
+        id: 104,
+        question: "A contract of sale passes:",
+        options: [
+            "The full fee simple title to the purchaser",
+            "Only an equitable title",
+            "The legal title",
+            "An estate for years"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Contracts & Agreements",
+        difficulty: "medium",
+        explanation: "A contract of sale (land contract) passes equitable title to the buyer. Legal title remains with the seller until the contract is fulfilled.",
+        sourceChapter: "California RE Exam Study Manual"
+    },
+    {
+        id: 105,
+        question: "A power of attorney is terminated:",
+        options: [
+            "By an express revocation by the principal",
+            "By the death of the principal",
+            "By incapability of the principal to contract",
+            "By any of the above"
+        ],
+        correctAnswers: [3],
+        type: "single",
+        category: "Legal Concepts",
+        difficulty: "medium",
+        explanation: "A power of attorney can be terminated by express revocation, death of principal, incapacity, or completion of the purpose.",
+        sourceChapter: "California RE Exam Study Manual"
+    },
+    {
+        id: 106,
+        question: "An exclusive right to sell listing means:",
+        options: [
+            "Only one broker may list the property",
+            "The broker earns a commission no matter who sells the property",
+            "The seller cannot sell the property themselves",
+            "The broker must sell within a specified time"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Agency & Ethics",
+        difficulty: "medium",
+        explanation: "In an exclusive right to sell listing, the broker earns the commission regardless of who finds the buyer, including the seller.",
+        sourceChapter: "California RE Exam Study Manual"
+    },
+    {
+        id: 107,
+        question: "Under a lease, the leasehold interest belongs to the:",
+        options: [
+            "Lessor",
+            "Lessee",
+            "Reversioner",
+            "Vendor"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Property Ownership",
+        difficulty: "medium",
+        explanation: "The lessee (tenant) holds the leasehold interest. The lessor (landlord) holds the reversionary interest.",
+        sourceChapter: "California RE Exam Study Manual"
+    },
+    {
+        id: 108,
+        question: "Under no circumstances may a broker:",
+        options: [
+            "Receive a commission from both buyer and seller",
+            "Appoint a subagent",
+            "Misrepresent material facts",
+            "Sell the principal's property to a relative"
+        ],
+        correctAnswers: [2],
+        type: "single",
+        category: "Agency & Ethics",
+        difficulty: "medium",
+        explanation: "A broker may never misrepresent material facts. This is a violation of fiduciary duty and grounds for license revocation.",
+        sourceChapter: "California RE Exam Study Manual"
+    },
+    {
+        id: 109,
+        question: "The quantity-survey method, the square foot method, and the unit-in-place method are related to:",
+        options: [
+            "Real estate finance",
+            "Property management",
+            "Real estate appraisal",
+            "Property leasing"
+        ],
+        correctAnswers: [2],
+        type: "single",
+        category: "Appraisal & Valuation",
+        difficulty: "medium",
+        explanation: "These are all methods used in the cost approach to appraisal to estimate the cost of reproducing improvements.",
+        sourceChapter: "California RE Exam Study Manual"
+    },
+    {
+        id: 110,
+        question: "TILA stands for:",
+        options: [
+            "Terrible Issues in Lending Act",
+            "Truth in Labels Act",
+            "Trust in Loans Act",
+            "Truth in Lending Act"
+        ],
+        correctAnswers: [3],
+        type: "single",
+        category: "Finance & Lending",
+        difficulty: "medium",
+        explanation: "TILA (Truth in Lending Act) requires lenders to disclose credit terms and costs to borrowers.",
+        sourceChapter: "Mastering Real Estate Math"
+    },
+    {
+        id: 111,
+        question: "The CFPB is an independent governmental agency responsible for:",
+        options: [
+            "Consumer protection",
+            "Bank protection",
+            "Wall Street protection",
+            "Congressional oversight"
+        ],
+        correctAnswers: [0],
+        type: "single",
+        category: "Finance & Lending",
+        difficulty: "medium",
+        explanation: "The Consumer Financial Protection Bureau (CFPB) was created by Dodd-Frank to protect consumers in financial transactions.",
+        sourceChapter: "Mastering Real Estate Math"
+    },
+    {
+        id: 112,
+        question: "The Loan Estimate must be provided to the consumer within:",
+        options: [
+            "Three business days of the loan application",
+            "Three business days of the Notice of Intent to Proceed",
+            "Three business days after supporting documentation is received",
+            "Three business days after receiving the real estate contract"
+        ],
+        correctAnswers: [0],
+        type: "single",
+        category: "Finance & Lending",
+        difficulty: "medium",
+        explanation: "Under TRID rules, the Loan Estimate must be provided within 3 business days of receiving the loan application.",
+        sourceChapter: "Mastering Real Estate Math"
+    },
+    {
+        id: 113,
+        question: "What does the term 'encumbrance' mean in real estate?",
+        options: [
+            "A type of deed transfer",
+            "A claim, lien, or liability attached to property",
+            "A method of property appraisal",
+            "A type of property insurance"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Legal Concepts",
+        difficulty: "medium",
+        explanation: "An encumbrance is any claim, lien, charge, or liability that affects the title to real property.",
+        sourceChapter: "California RE Exam Study Manual"
+    },
+    {
+        id: 114,
+        question: "Joint tenancy differs from tenancy in common in that joint tenancy includes:",
+        options: [
+            "The right of inheritance",
+            "The right of survivorship",
+            "The right to partition",
+            "The right to sell"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Property Ownership",
+        difficulty: "medium",
+        explanation: "Joint tenancy includes the right of survivorship, meaning when one owner dies, their interest passes to the surviving owners.",
+        sourceChapter: "California RE Exam Study Manual"
+    },
+    {
+        id: 115,
+        question: "A lien that attaches to all property of the debtor is called:",
+        options: [
+            "A specific lien",
+            "A general lien",
+            "A mechanic's lien",
+            "A voluntary lien"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Legal Concepts",
+        difficulty: "medium",
+        explanation: "A general lien attaches to all property owned by the debtor, while a specific lien attaches only to specific property.",
+        sourceChapter: "California RE Exam Study Manual"
+    },
+    {
+        id: 116,
+        question: "The best way to find cash buyers for wholesale deals is:",
+        options: [
+            "Facebook ads only",
+            "Networking at REIA meetings and building a buyers list",
+            "Waiting for buyers to contact you",
+            "Only working with one buyer"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Buyer Marketing & Networking",
+        difficulty: "medium",
+        explanation: "Building a strong buyers list through networking at Real Estate Investor Association meetings is essential for successful wholesaling.",
+        sourceChapter: "How to Wholesale Real Estate"
+    },
+    {
+        id: 117,
+        question: "In reverse wholesaling, the first step is to:",
+        options: [
+            "Find a distressed property",
+            "Sign a purchase agreement",
+            "Identify what your buyers want",
+            "Calculate the ARV"
+        ],
+        correctAnswers: [2],
+        type: "single",
+        category: "Advanced Strategies & Legal",
+        difficulty: "medium",
+        explanation: "Reverse wholesaling starts with understanding what your buyers want, then finding properties that match their criteria.",
+        sourceChapter: "Reverse Wholesaling"
+    },
+    {
+        id: 118,
+        question: "What is the standard assignment fee range in wholesaling?",
+        options: [
+            "$500 - $1,000",
+            "$2,000 - $10,000",
+            "$15,000 - $30,000",
+            "There is no standard - it depends on the deal"
+        ],
+        correctAnswers: [3],
+        type: "single",
+        category: "Wholesaling Fundamentals",
+        difficulty: "medium",
+        explanation: "Assignment fees vary widely based on the deal's potential profit, market conditions, and property value.",
+        sourceChapter: "How to Wholesale Real Estate"
+    },
+    {
+        id: 119,
+        question: "The '70% Rule' in wholesaling means:",
+        options: [
+            "You need 70% of the purchase price as a down payment",
+            "Offer no more than 70% of ARV minus repairs",
+            "You keep 70% of the profit",
+            "70% of deals will close successfully"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Wholesaling Fundamentals",
+        difficulty: "medium",
+        explanation: "The 70% rule states: Maximum offer = (ARV × 0.70) - Repair costs. This ensures enough margin for the investor.",
+        sourceChapter: "How to Wholesale Real Estate"
+    },
+    {
+        id: 120,
+        question: "What is the biggest risk in wholesaling real estate?",
+        options: [
+            "Having too many buyers",
+            "Not being able to find an end buyer before closing",
+            "Making too much money",
+            "Having too many deals"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Wholesaling Fundamentals",
+        difficulty: "medium",
+        explanation: "The main risk is not finding a buyer to assign the contract to, which could leave you obligated to purchase the property.",
+        sourceChapter: "How to Wholesale Real Estate"
+    },
+    {
+        id: 121,
+        question: "What does ARV stand for?",
+        options: [
+            "Annual Revenue Value",
+            "After Repair Value",
+            "Assessed Rental Value",
+            "Average Real Value"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Wholesaling Fundamentals",
+        difficulty: "easy",
+        explanation: "ARV (After Repair Value) is the estimated market value of a property after all repairs and renovations are completed.",
+        sourceChapter: "How to Wholesale Real Estate"
+    },
+    {
+        id: 122,
+        question: "Title insurance protects against:",
+        options: [
+            "Future claims against the property",
+            "Past defects in the title",
+            "Property damage",
+            "Tenant defaults"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Legal Concepts",
+        difficulty: "medium",
+        explanation: "Title insurance protects against losses from defects in title that existed before the policy was issued.",
+        sourceChapter: "California RE Exam Study Manual"
+    },
+    {
+        id: 123,
+        question: "An earnest money deposit shows:",
+        options: [
+            "The buyer has been pre-approved for a loan",
+            "The seller is motivated",
+            "The buyer's good faith intention to complete the purchase",
+            "The property has been appraised"
+        ],
+        correctAnswers: [2],
+        type: "single",
+        category: "Contracts & Agreements",
+        difficulty: "medium",
+        explanation: "Earnest money demonstrates the buyer's serious intent to purchase and is typically held in escrow.",
+        sourceChapter: "How to Wholesale Real Estate"
+    },
+    {
+        id: 124,
+        question: "Which approach to value considers the income a property produces?",
+        options: [
+            "Cost approach",
+            "Sales comparison approach",
+            "Income approach",
+            "Market approach"
+        ],
+        correctAnswers: [2],
+        type: "single",
+        category: "Appraisal & Valuation",
+        difficulty: "medium",
+        explanation: "The income approach values property based on its ability to generate income, using capitalization rates.",
+        sourceChapter: "Mastering Real Estate Math"
+    },
+    {
+        id: 125,
+        question: "What is a 'motivated seller' in wholesaling?",
+        options: [
+            "A seller who is a licensed real estate agent",
+            "A seller with a pressing need to sell quickly",
+            "A seller asking above market value",
+            "A seller who owns multiple properties"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Lead Generation & Prospecting",
+        difficulty: "easy",
+        explanation: "A motivated seller has circumstances (divorce, foreclosure, relocation) that create urgency to sell, often at a discount.",
+        sourceChapter: "How to Wholesale Real Estate"
+    },
+    {
+        id: 126,
+        question: "The due diligence period allows the buyer to:",
+        options: [
+            "Back out for any reason without penalty",
+            "Inspect the property and investigate title",
+            "Negotiate a lower price after signing",
+            "Transfer the contract to another party"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Contracts & Agreements",
+        difficulty: "medium",
+        explanation: "Due diligence is the period where buyers can inspect the property, review title, and verify all aspects of the purchase.",
+        sourceChapter: "How to Wholesale Real Estate"
+    },
+    {
+        id: 127,
+        question: "A cap rate is calculated by:",
+        options: [
+            "Sale price divided by gross income",
+            "Net operating income divided by purchase price",
+            "Monthly rent times 12",
+            "Purchase price divided by net income"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Market Analysis & Comps",
+        difficulty: "medium",
+        explanation: "Cap Rate = NOI / Purchase Price. It measures the rate of return on a real estate investment.",
+        sourceChapter: "Mastering Real Estate Math"
+    },
+    {
+        id: 128,
+        question: "What is 'driving for dollars'?",
+        options: [
+            "A delivery service for real estate documents",
+            "Physically driving neighborhoods to find distressed properties",
+            "Calculating transportation costs for investors",
+            "A lending program for car dealerships"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Lead Generation & Prospecting",
+        difficulty: "easy",
+        explanation: "Driving for dollars means physically searching neighborhoods for distressed or vacant properties to potentially wholesale.",
+        sourceChapter: "How to Wholesale Real Estate"
+    },
+    {
+        id: 129,
+        question: "Comps in real estate refer to:",
+        options: [
+            "Compensation for agents",
+            "Comparable sales used for valuation",
+            "Company structures",
+            "Complaints filed against sellers"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Market Analysis & Comps",
+        difficulty: "easy",
+        explanation: "Comps (comparables) are recently sold similar properties used to determine a property's market value.",
+        sourceChapter: "How to Wholesale Real Estate"
+    },
+    {
+        id: 130,
+        question: "A bird dog in real estate wholesaling is:",
+        options: [
+            "A type of property defect",
+            "Someone who finds deals for wholesalers for a fee",
+            "A government inspector",
+            "An aggressive negotiator"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Wholesaling Fundamentals",
+        difficulty: "medium",
+        explanation: "A bird dog finds potential deals and brings them to wholesalers in exchange for a finder's fee.",
+        sourceChapter: "How to Wholesale Real Estate"
+    },
+    {
+        id: 131,
+        question: "What is the main advantage of wholesaling over traditional real estate investing?",
+        options: [
+            "Higher profits on each deal",
+            "Little to no capital required to get started",
+            "Guaranteed income",
+            "No competition"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Wholesaling Fundamentals",
+        difficulty: "easy",
+        explanation: "Wholesaling requires minimal capital because you don't actually purchase the property - you assign the contract.",
+        sourceChapter: "How to Wholesale Real Estate"
+    },
+    {
+        id: 132,
+        question: "A contingency in a real estate contract is:",
+        options: [
+            "A guaranteed close date",
+            "A condition that must be met for the contract to proceed",
+            "An extra fee paid by the seller",
+            "Insurance against property damage"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Contracts & Agreements",
+        difficulty: "medium",
+        explanation: "Contingencies are conditions (financing, inspection, appraisal) that must be satisfied or the buyer can exit the contract.",
+        sourceChapter: "California RE Exam Study Manual"
+    },
+    {
+        id: 133,
+        question: "What is the difference between a double close and an assignment?",
+        options: [
+            "There is no difference",
+            "In a double close, you actually purchase the property briefly",
+            "An assignment requires more capital",
+            "A double close is illegal in most states"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Wholesaling Fundamentals",
+        difficulty: "medium",
+        explanation: "In a double close, you purchase the property and immediately resell it. In an assignment, you sell your contract rights.",
+        sourceChapter: "How to Wholesale Real Estate"
+    },
+    {
+        id: 134,
+        question: "The best time to negotiate price reductions is:",
+        options: [
+            "Never - always pay asking price",
+            "After inspections reveal issues",
+            "Only if the seller volunteers",
+            "Before viewing the property"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Making Offers & Negotiation",
+        difficulty: "medium",
+        explanation: "Inspection findings give legitimate grounds for renegotiation if issues are discovered.",
+        sourceChapter: "How to Wholesale Real Estate"
+    },
+    {
+        id: 135,
+        question: "Proof of funds is:",
+        options: [
+            "Only needed for cash purchases",
+            "Documentation showing ability to complete a purchase",
+            "The same as pre-approval",
+            "Not required for wholesaling"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Wholesaling Fundamentals",
+        difficulty: "medium",
+        explanation: "Proof of funds shows sellers you can complete the transaction. Wholesalers often use transactional funding or partner POF.",
+        sourceChapter: "How to Wholesale Real Estate"
+    },
+    {
+        id: 136,
+        question: "What is transactional funding?",
+        options: [
+            "A long-term mortgage",
+            "Short-term lending for same-day property transactions",
+            "Government grants for investors",
+            "Credit card financing"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Finance & Lending",
+        difficulty: "medium",
+        explanation: "Transactional funding is short-term (often same-day) lending used for double closings in wholesaling.",
+        sourceChapter: "How to Wholesale Real Estate"
+    },
+    {
+        id: 137,
+        question: "A skip trace is:",
+        options: [
+            "A type of property inspection",
+            "Finding contact information for property owners",
+            "A legal document for eviction",
+            "An accounting method"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Lead Generation & Prospecting",
+        difficulty: "medium",
+        explanation: "Skip tracing is the process of finding current contact information for property owners who may be hard to locate.",
+        sourceChapter: "How to Wholesale Real Estate"
+    },
+    {
+        id: 138,
+        question: "In real estate, 'LTV' stands for:",
+        options: [
+            "Long Term Value",
+            "Loan to Value ratio",
+            "Licensed Transaction Vendor",
+            "Land Title Verification"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Finance & Lending",
+        difficulty: "easy",
+        explanation: "LTV (Loan to Value) is the ratio of a loan amount to the property's appraised value, expressed as a percentage.",
+        sourceChapter: "Mastering Real Estate Math"
+    },
+    {
+        id: 139,
+        question: "What is the purpose of an inspection contingency?",
+        options: [
+            "To allow the seller time to make repairs",
+            "To protect the buyer if significant issues are found",
+            "To increase the purchase price",
+            "To extend the closing date"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Contracts & Agreements",
+        difficulty: "medium",
+        explanation: "An inspection contingency allows buyers to exit or renegotiate if the inspection reveals major problems.",
+        sourceChapter: "California RE Exam Study Manual"
+    },
+    {
+        id: 140,
+        question: "Equity in a property is calculated as:",
+        options: [
+            "Purchase price minus closing costs",
+            "Market value minus all debts owed on the property",
+            "Monthly rent times 12",
+            "Appraised value divided by 2"
+        ],
+        correctAnswers: [1],
+        type: "single",
+        category: "Market Analysis & Comps",
+        difficulty: "easy",
+        explanation: "Equity = Market Value - Total Liens/Mortgages. It represents the owner's actual stake in the property.",
+        sourceChapter: "Mastering Real Estate Math"
     }
 ];
 
